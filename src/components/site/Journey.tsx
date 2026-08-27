@@ -128,9 +128,23 @@ export function Journey() {
                       className="group block w-full text-left"
                     >
                       <p className="eyebrow">{c.period}</p>
-                      <h3 className="display mt-2 text-3xl transition-colors group-hover:text-accent md:text-4xl">
-                        {c.org}
-                      </h3>
+                      <div className="mt-3 flex items-center gap-4">
+                        <span
+                          className={cn(
+                            "flex size-11 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-border bg-background",
+                            c.current && "now-dot",
+                          )}
+                        >
+                          {c.logo ? (
+                            <img src={c.logo} alt={`${c.org} logo`} className="size-8 object-contain" loading="lazy" />
+                          ) : (
+                            <span className="display text-sm tracking-tight text-accent">{c.monogram}</span>
+                          )}
+                        </span>
+                        <h3 className="display text-3xl transition-colors group-hover:text-accent md:text-4xl">
+                          {c.org}
+                        </h3>
+                      </div>
                       <p className="mt-2 max-w-xl text-sm text-muted-foreground md:text-base">
                         {c.role}
                       </p>
