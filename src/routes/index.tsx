@@ -2,7 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Nav } from "@/components/site/Nav";
 import { Reveal } from "@/components/site/Reveal";
 import { Journey } from "@/components/site/Journey";
+import { SocialLinks } from "@/components/site/SocialLinks";
 import texture from "@/assets/texture.jpg";
+import portrait from "@/assets/hrithik-portrait.jpg";
 import community from "@/assets/foc-community.jpg";
 
 export const Route = createFileRoute("/")({
@@ -28,6 +30,7 @@ export const Route = createFileRoute("/")({
 const LINKEDIN = "https://www.linkedin.com/in/imhrithikkedia/";
 const LINKTREE = "https://linktr.ee/imhrithikkedia";
 const EMAIL = "mailto:hello@hrithikkedia.com";
+const TOPMATE = "https://topmate.io/imhrithikkedia";
 
 const tags = ["Founder's Office", "Business & P&L", "Strategy & Execution", "Community Building"];
 
@@ -153,27 +156,44 @@ function Home() {
             <Reveal delay={280}>
               <div className="mt-10 flex flex-wrap items-center gap-4">
                 <a
+                  href={TOPMATE}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="rounded-full bg-accent px-6 py-3 text-sm text-accent-foreground transition-transform duration-300 hover:-translate-y-0.5"
+                >
+                  Book a 1:1 call ↗
+                </a>
+                <a
                   href="#journey"
-                  className="rounded-full bg-primary px-6 py-3 text-sm text-primary-foreground transition-transform duration-300 hover:-translate-y-0.5"
+                  className="rounded-full border border-border px-6 py-3 text-sm transition-colors hover:bg-secondary"
                 >
                   Explore my journey ↓
                 </a>
-                <a href="#contact" className="link-underline text-sm text-foreground/80">
-                  Let's connect
-                </a>
               </div>
+            </Reveal>
+
+            <Reveal delay={340}>
+              <SocialLinks className="mt-8" />
             </Reveal>
           </div>
 
           <Reveal delay={200}>
             <figure className="relative">
               <img
-                src={texture}
-                alt="Editorial ink-wash texture in cream and clay tones"
-                width={1200}
-                height={1500}
+                src={portrait}
+                alt="Portrait of Hrithik Kedia"
+                width={719}
+                height={719}
                 className="aspect-[4/5] w-full rounded-sm object-cover"
                 style={{ boxShadow: "var(--shadow-soft)" }}
+              />
+              <img
+                src={texture}
+                alt=""
+                aria-hidden="true"
+                width={1200}
+                height={1500}
+                className="absolute -bottom-6 -left-6 -z-10 aspect-[4/5] w-2/3 rounded-sm object-cover opacity-60"
               />
               <figcaption className="mt-4 max-w-xs text-xs leading-relaxed text-muted-foreground">
                 “I build where the problems are messy and the playbook doesn't exist yet.”
@@ -402,8 +422,36 @@ function Home() {
             </p>
           </Reveal>
 
-          <Reveal delay={120}>
-            <div className="mt-12 flex flex-wrap gap-3">
+          <Reveal delay={100}>
+            <div className="mt-12 flex flex-col gap-6 rounded-sm border border-accent/40 bg-secondary/40 p-6 sm:flex-row sm:items-center sm:justify-between md:p-8">
+              <div>
+                <p className="eyebrow text-accent">Topmate</p>
+                <p className="display mt-2 text-2xl md:text-3xl">Want direct access?</p>
+                <p className="mt-2 max-w-md text-sm leading-relaxed text-foreground/70">
+                  Book a 1:1 call or send a Priority DM — careers, Founder's Office, building as a
+                  generalist, or FOC.
+                </p>
+              </div>
+              <a
+                href={TOPMATE}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="inline-flex shrink-0 items-center justify-center rounded-full bg-accent px-6 py-3 text-sm text-accent-foreground transition-transform duration-300 hover:-translate-y-0.5"
+              >
+                Book on Topmate ↗
+              </a>
+            </div>
+          </Reveal>
+
+          <Reveal delay={160}>
+            <div className="mt-12">
+              <p className="eyebrow mb-5 text-muted-foreground">Find me on</p>
+              <SocialLinks />
+            </div>
+          </Reveal>
+
+          <Reveal delay={220}>
+            <div className="mt-10 flex flex-wrap gap-3">
               <a
                 href={LINKEDIN}
                 target="_blank"
