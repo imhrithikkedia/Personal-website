@@ -156,27 +156,44 @@ function Home() {
             <Reveal delay={280}>
               <div className="mt-10 flex flex-wrap items-center gap-4">
                 <a
+                  href={TOPMATE}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="rounded-full bg-accent px-6 py-3 text-sm text-accent-foreground transition-transform duration-300 hover:-translate-y-0.5"
+                >
+                  Book a 1:1 call ↗
+                </a>
+                <a
                   href="#journey"
-                  className="rounded-full bg-primary px-6 py-3 text-sm text-primary-foreground transition-transform duration-300 hover:-translate-y-0.5"
+                  className="rounded-full border border-border px-6 py-3 text-sm transition-colors hover:bg-secondary"
                 >
                   Explore my journey ↓
                 </a>
-                <a href="#contact" className="link-underline text-sm text-foreground/80">
-                  Let's connect
-                </a>
               </div>
+            </Reveal>
+
+            <Reveal delay={340}>
+              <SocialLinks className="mt-8" />
             </Reveal>
           </div>
 
           <Reveal delay={200}>
             <figure className="relative">
               <img
-                src={texture}
-                alt="Editorial ink-wash texture in cream and clay tones"
-                width={1200}
-                height={1500}
+                src={portrait}
+                alt="Portrait of Hrithik Kedia"
+                width={719}
+                height={719}
                 className="aspect-[4/5] w-full rounded-sm object-cover"
                 style={{ boxShadow: "var(--shadow-soft)" }}
+              />
+              <img
+                src={texture}
+                alt=""
+                aria-hidden="true"
+                width={1200}
+                height={1500}
+                className="absolute -bottom-6 -left-6 -z-10 aspect-[4/5] w-2/3 rounded-sm object-cover opacity-60"
               />
               <figcaption className="mt-4 max-w-xs text-xs leading-relaxed text-muted-foreground">
                 “I build where the problems are messy and the playbook doesn't exist yet.”
