@@ -129,12 +129,7 @@ export function Journey() {
                     >
                       <p className="eyebrow">{c.period}</p>
                       <div className="mt-3 flex items-center gap-4">
-                        <span
-                          className={cn(
-                            "flex size-11 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-border bg-background",
-                            c.current && "now-dot",
-                          )}
-                        >
+                        <span className="flex size-11 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-border bg-background">
                           {c.logo ? (
                             <img src={c.logo} alt={`${c.org} logo`} className="size-8 object-contain" loading="lazy" />
                           ) : (
