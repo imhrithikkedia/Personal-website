@@ -1,24 +1,442 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Nav } from "@/components/site/Nav";
+import { Reveal } from "@/components/site/Reveal";
+import { Journey } from "@/components/site/Journey";
+import texture from "@/assets/texture.jpg";
+import community from "@/assets/foc-community.jpg";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "Hrithik Kedia — Generalist Operator & Community Builder" },
+      {
+        name: "description",
+        content:
+          "I build where the problems are messy and the playbook doesn't exist yet. Generalist operator across strategy, business, P&L and growth — and co-builder of Founder's Office Club.",
+      },
+      { property: "og:title", content: "Hrithik Kedia — Generalist Operator" },
+      {
+        property: "og:description",
+        content:
+          "A personal operating story: Founder's Office, business building, P&L ownership and community.",
+      },
+    ],
+  }),
+  component: Home,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+const LINKEDIN = "https://www.linkedin.com/in/imhrithikkedia/";
+const LINKTREE = "https://linktr.ee/imhrithikkedia";
+const EMAIL = "mailto:hello@hrithikkedia.com";
+
+const tags = ["Founder's Office", "Business & P&L", "Strategy & Execution", "Community Building"];
+
+const owned = [
+  {
+    icon: "📈",
+    title: "Businesses & P&Ls",
+    body: "From evaluating new markets to owning categories and thinking about unit economics, I enjoy understanding what makes a business work.",
+  },
+  {
+    icon: "🚀",
+    title: "Zero-to-One & Special Projects",
+    body: "The projects with the least clarity are often the most fun.",
+  },
+  {
+    icon: "🎯",
+    title: "Growth & GTM",
+    body: "Community, events, partnerships, marketing and new initiatives — always with an eye on the business outcome.",
+  },
+  {
+    icon: "🤝",
+    title: "Partnerships & Ecosystems",
+    body: "I enjoy bringing the right people and organisations together to create leverage.",
+  },
+  {
+    icon: "⚙️",
+    title: "Operations & Systems",
+    body: "Behind every exciting business is usually an unglamorous process that needs fixing.",
+  },
+  {
+    icon: "🧩",
+    title: "Connecting the Dots",
+    body: "My biggest strength is probably context — the ability to see how different parts of a business connect.",
+  },
+];
+
+const principles = [
+  {
+    n: "01",
+    title: "Context before conclusions",
+    body: "The answer usually changes when you understand the full picture.",
+  },
+  {
+    n: "02",
+    title: "Ownership beats job descriptions",
+    body: "If something important needs doing, the org chart can wait.",
+  },
+  {
+    n: "03",
+    title: "Strategy without execution is just a nice document",
+    body: "Ideas only become valuable when someone is willing to get their hands dirty.",
+  },
+  {
+    n: "04",
+    title: "Build people and communities along the way",
+    body: "The most meaningful work compounds when it helps other people grow too.",
+  },
+];
+
+const outside = [
+  "Building and experimenting with communities",
+  "Meeting founders, operators and interesting people",
+  "Thinking and talking about careers in the generalist ecosystem",
+  "Occasionally getting in front of the camera for things I never expected to be doing at work",
+  "Travelling and collecting experiences",
+  "Trying to figure out what's next",
+];
+
+function Home() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div id="top" className="min-h-screen bg-background text-foreground">
+      <Nav />
+
+      {/* HERO */}
+      <section className="px-6 pb-20 pt-32 md:px-10 md:pb-28 md:pt-40">
+        <div className="mx-auto grid max-w-6xl items-end gap-14 md:grid-cols-[1.4fr_1fr] md:gap-16">
+          <div>
+            <Reveal>
+              <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1.5">
+                <span className="now-dot size-1.5 rounded-full bg-accent" />
+                <span className="eyebrow text-foreground/70">
+                  Now — Business & P&amp;L at Primus Senior Living · Co-building FOC
+                </span>
+              </div>
+            </Reveal>
+
+            <Reveal delay={80}>
+              <p className="eyebrow mt-10">Hi, I'm Hrithik Kedia 👋</p>
+              <h1 className="display mt-5 text-[2.7rem] leading-[1.03] sm:text-6xl lg:text-7xl">
+                I like building things when there isn't a{" "}
+                <span className="italic text-accent">clear manual.</span>
+              </h1>
+            </Reveal>
+
+            <Reveal delay={160}>
+              <div className="mt-8 max-w-xl space-y-4 text-[1.02rem] leading-relaxed text-foreground/75">
+                <p>
+                  I'm a generalist operator working at the intersection of strategy and execution.
+                  Over the last few years, I've worked across startups and businesses, taking on
+                  everything from GTM and growth to business development, P&amp;Ls, partnerships,
+                  and special projects.
+                </p>
+                <p>
+                  Somehow, I also found time to co-build a community for people doing similarly
+                  chaotic jobs.
+                </p>
+              </div>
+            </Reveal>
+
+            <Reveal delay={220}>
+              <ul className="mt-8 flex flex-wrap gap-2">
+                {tags.map((t) => (
+                  <li
+                    key={t}
+                    className="rounded-full border border-border bg-card px-3.5 py-1.5 text-xs tracking-wide text-foreground/70"
+                  >
+                    {t}
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+
+            <Reveal delay={280}>
+              <div className="mt-10 flex flex-wrap items-center gap-4">
+                <a
+                  href="#journey"
+                  className="rounded-full bg-primary px-6 py-3 text-sm text-primary-foreground transition-transform duration-300 hover:-translate-y-0.5"
+                >
+                  Explore my journey ↓
+                </a>
+                <a href="#contact" className="link-underline text-sm text-foreground/80">
+                  Let's connect
+                </a>
+              </div>
+            </Reveal>
+          </div>
+
+          <Reveal delay={200}>
+            <figure className="relative">
+              <img
+                src={texture}
+                alt="Editorial ink-wash texture in cream and clay tones"
+                width={1200}
+                height={1500}
+                className="aspect-[4/5] w-full rounded-sm object-cover"
+                style={{ boxShadow: "var(--shadow-soft)" }}
+              />
+              <figcaption className="mt-4 max-w-xs text-xs leading-relaxed text-muted-foreground">
+                “I build where the problems are messy and the playbook doesn't exist yet.”
+              </figcaption>
+            </figure>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* MARQUEE STATEMENT */}
+      <section className="border-y border-border bg-primary py-14 text-primary-foreground md:py-20">
+        <div className="mx-auto max-w-5xl px-6 md:px-10">
+          <Reveal>
+            <p className="display text-2xl leading-snug md:text-4xl">
+              Strategy is interesting.{" "}
+              <span className="italic opacity-70">Execution is where I feel at home.</span>
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ABOUT */}
+      <section id="about" className="py-24 md:py-32">
+        <div className="mx-auto max-w-5xl px-6 md:px-10">
+          <Reveal>
+            <p className="eyebrow">01 — The generalist advantage</p>
+            <h2 className="display mt-5 max-w-3xl text-4xl md:text-6xl">
+              I never really fit into one job description.
+            </h2>
+          </Reveal>
+
+          <div className="mt-12 grid gap-10 md:grid-cols-[1fr_1.15fr]">
+            <Reveal delay={80}>
+              <p className="text-lg leading-relaxed text-foreground/80">
+                Early in my career, I realised I was less interested in climbing a predefined
+                corporate ladder and more curious about how businesses actually work.
+              </p>
+              <p className="display mt-6 text-2xl italic text-accent">So I chose the messier route.</p>
+            </Reveal>
+
+            <Reveal delay={140}>
+              <div className="space-y-5 text-[1.02rem] leading-relaxed text-foreground/75">
+                <p>
+                  I've worked in Founder's Office and Business Operations roles where one quarter
+                  could mean building GTM strategies and the next could mean evaluating a new
+                  market, running a P&amp;L, fixing an internal process, launching a campaign, or
+                  working on a partnership.
+                </p>
+                <p>That's what I love about being a generalist.</p>
+                <p>
+                  You develop context. You learn to connect dots across functions. And most
+                  importantly, you learn how to move from “someone should solve this” to “I'll
+                  figure this out.”
+                </p>
+              </div>
+            </Reveal>
+          </div>
+
+          <Reveal delay={120}>
+            <blockquote className="mt-16 border-t border-border pt-10">
+              <p className="display max-w-3xl text-3xl leading-tight md:text-5xl">
+                My favourite job description is usually the one that hasn't been written yet.
+              </p>
+            </blockquote>
+          </Reveal>
+        </div>
+      </section>
+
+      <Journey />
+
+      {/* BUILT & OWNED */}
+      <section id="owned" className="py-24 md:py-32">
+        <div className="mx-auto max-w-6xl px-6 md:px-10">
+          <Reveal>
+            <p className="eyebrow">03 — Things I've built &amp; owned</p>
+            <h2 className="display mt-5 max-w-2xl text-4xl md:text-6xl">
+              Less a skill list. More how I operate.
+            </h2>
+          </Reveal>
+
+          <div className="mt-14 grid gap-x-14 md:grid-cols-2">
+            {owned.map((o, i) => (
+              <Reveal key={o.title} delay={i * 50}>
+                <div className="group border-t border-border py-8">
+                  <div className="flex items-baseline gap-4">
+                    <span className="text-xl">{o.icon}</span>
+                    <h3 className="display text-2xl transition-colors group-hover:text-accent md:text-3xl">
+                      {o.title}
+                    </h3>
+                  </div>
+                  <p className="mt-4 max-w-md text-[0.97rem] leading-relaxed text-foreground/70">
+                    {o.body}
+                  </p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FOC */}
+      <section id="foc" className="border-y border-border bg-primary py-24 text-primary-foreground md:py-32">
+        <div className="mx-auto max-w-6xl px-6 md:px-10">
+          <div className="grid gap-14 md:grid-cols-[1.1fr_1fr] md:gap-16">
+            <div>
+              <Reveal>
+                <p className="eyebrow text-primary-foreground/60">04 — Founder's Office Club</p>
+                <h2 className="display mt-5 text-4xl md:text-6xl">
+                  Building the community I wish I had when I started.
+                </h2>
+              </Reveal>
+
+              <Reveal delay={100}>
+                <div className="mt-8 max-w-xl space-y-5 text-[1.02rem] leading-relaxed text-primary-foreground/75">
+                  <p>
+                    While working in Founder's Office roles myself, I realised something:
+                    generalists often operate at the centre of a business, but build in isolation.
+                  </p>
+                  <p>
+                    There isn't a conventional career path. There isn't always a peer group. And
+                    most of the learning happens through trial, error, and context-switching.
+                  </p>
+                  <p className="text-primary-foreground">
+                    That's why we started Founder's Office Club (FOC).
+                  </p>
+                  <p>
+                    FOC brings together Founder's Office professionals, Chiefs of Staff, EIRs,
+                    Office-of-CxO operators, founders and aspiring generalists to share frameworks,
+                    experiences and real-world lessons.
+                  </p>
+                  <p>
+                    What started as conversations has grown into a meaningful community of people
+                    who care about building leverage — not just collecting titles.
+                  </p>
+                </div>
+              </Reveal>
+
+              <Reveal delay={160}>
+                <a
+                  href={LINKTREE}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="mt-10 inline-flex rounded-full bg-accent px-6 py-3 text-sm text-accent-foreground transition-transform duration-300 hover:-translate-y-0.5"
+                >
+                  Explore FOC →
+                </a>
+              </Reveal>
+            </div>
+
+            <Reveal delay={120}>
+              <img
+                src={community}
+                alt="Operators and founders talking in small groups at a community meetup"
+                loading="lazy"
+                width={1600}
+                height={1000}
+                className="aspect-[4/3] w-full rounded-sm object-cover md:aspect-[3/4]"
+              />
+              <p className="mt-4 text-xs text-primary-foreground/55">
+                Conversations first. Community after.
+              </p>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* PHILOSOPHY */}
+      <section className="py-24 md:py-32">
+        <div className="mx-auto max-w-6xl px-6 md:px-10">
+          <Reveal>
+            <p className="eyebrow">05 — My operating philosophy</p>
+            <h2 className="display mt-5 max-w-2xl text-4xl md:text-6xl">Four things I keep coming back to.</h2>
+          </Reveal>
+
+          <div className="mt-14 grid gap-x-16 gap-y-2 md:grid-cols-2">
+            {principles.map((p, i) => (
+              <Reveal key={p.n} delay={i * 60}>
+                <div className="border-t border-border py-10">
+                  <span className="eyebrow text-accent">{p.n}</span>
+                  <h3 className="display mt-4 text-2xl md:text-3xl">{p.title}</h3>
+                  <p className="mt-3 max-w-md text-[0.97rem] leading-relaxed text-foreground/70">
+                    {p.body}
+                  </p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* OUTSIDE THE SPREADSHEET */}
+      <section className="border-t border-border bg-secondary/40 py-24 md:py-32">
+        <div className="mx-auto max-w-5xl px-6 md:px-10">
+          <Reveal>
+            <p className="eyebrow">06 — Outside the spreadsheet</p>
+            <h2 className="display mt-5 max-w-2xl text-4xl md:text-5xl">
+              When I'm not jumping between business problems…
+            </h2>
+          </Reveal>
+
+          <ul className="mt-12 space-y-1">
+            {outside.map((o, i) => (
+              <Reveal key={o} delay={i * 50} as="li">
+                <div className="group flex items-baseline gap-5 border-b border-border/70 py-5">
+                  <span className="font-mono text-xs text-muted-foreground">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span className="text-lg text-foreground/80 transition-transform duration-300 group-hover:translate-x-1 md:text-xl">
+                    {o}
+                  </span>
+                </div>
+              </Reveal>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* CONTACT */}
+      <section id="contact" className="py-24 md:py-36">
+        <div className="mx-auto max-w-5xl px-6 md:px-10">
+          <Reveal>
+            <p className="eyebrow">07 — Let's talk</p>
+            <p className="display mt-6 max-w-4xl text-3xl leading-tight md:text-6xl">
+              If you're building something interesting, figuring something messy out, or just want
+              to talk careers, chaos and clarity — <span className="italic text-accent">let's chat.</span>
+            </p>
+          </Reveal>
+
+          <Reveal delay={120}>
+            <div className="mt-12 flex flex-wrap gap-3">
+              <a
+                href={LINKEDIN}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="rounded-full bg-primary px-6 py-3 text-sm text-primary-foreground transition-transform duration-300 hover:-translate-y-0.5"
+              >
+                LinkedIn
+              </a>
+              <a
+                href={EMAIL}
+                className="rounded-full border border-border px-6 py-3 text-sm transition-colors hover:bg-secondary"
+              >
+                Email
+              </a>
+              <a
+                href={LINKTREE}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="rounded-full border border-border px-6 py-3 text-sm transition-colors hover:bg-secondary"
+              >
+                FOC / Community
+              </a>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      <footer className="border-t border-border py-10">
+        <div className="mx-auto flex max-w-5xl flex-col gap-3 px-6 text-xs text-muted-foreground md:flex-row md:items-center md:justify-between md:px-10">
+          <p>© {new Date().getFullYear()} Hrithik Kedia — a personal operating story.</p>
+          <p>Generalist Operator · Founder's Office · Community Builder</p>
+        </div>
+      </footer>
     </div>
   );
 }
