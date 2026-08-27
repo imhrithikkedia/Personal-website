@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Reveal } from "./Reveal";
+import hevoLogo from "@/assets/logos/hevo.png";
+import inferlessLogo from "@/assets/logos/inferless.png";
+import pwcLogo from "@/assets/logos/pwc.png";
 
 type Chapter = {
   id: string;
@@ -11,12 +14,15 @@ type Chapter = {
   intro?: string;
   points: string[];
   current?: boolean;
+  logo?: string;
+  monogram?: string;
 };
 
 const chapters: Chapter[] = [
   {
     id: "primus",
     org: "Primus Senior Living / Marzi",
+    monogram: "PSL",
     role: "Founder's Office → Business Builder → P&L & City Leadership",
     period: "Now",
     current: true,
@@ -38,6 +44,7 @@ const chapters: Chapter[] = [
   {
     id: "hevo",
     org: "Hevo Data",
+    logo: hevoLogo,
     role: "Strategy & Execution | BizOps",
     period: "Before that",
     theme: "Learning how growth happens when strategy meets execution.",
@@ -53,6 +60,7 @@ const chapters: Chapter[] = [
   {
     id: "inferless",
     org: "Inferless",
+    logo: inferlessLogo,
     role: "Founder's Office | Founding Team",
     period: "The generalist bootcamp",
     theme: "The place where I learned that context-switching can be a feature, not a bug.",
@@ -66,6 +74,7 @@ const chapters: Chapter[] = [
   {
     id: "pwc",
     org: "PwC",
+    logo: pwcLogo,
     role: "Associate | Digital Assurance & Transparency",
     period: "Where it started",
     theme: "So I left the predictable path and moved to Bengaluru to join a startup.",
