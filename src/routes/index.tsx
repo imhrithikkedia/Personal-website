@@ -422,8 +422,36 @@ function Home() {
             </p>
           </Reveal>
 
-          <Reveal delay={120}>
-            <div className="mt-12 flex flex-wrap gap-3">
+          <Reveal delay={100}>
+            <div className="mt-12 flex flex-col gap-6 rounded-sm border border-accent/40 bg-secondary/40 p-6 sm:flex-row sm:items-center sm:justify-between md:p-8">
+              <div>
+                <p className="eyebrow text-accent">Topmate</p>
+                <p className="display mt-2 text-2xl md:text-3xl">Want direct access?</p>
+                <p className="mt-2 max-w-md text-sm leading-relaxed text-foreground/70">
+                  Book a 1:1 call or send a Priority DM — careers, Founder's Office, building as a
+                  generalist, or FOC.
+                </p>
+              </div>
+              <a
+                href={TOPMATE}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="inline-flex shrink-0 items-center justify-center rounded-full bg-accent px-6 py-3 text-sm text-accent-foreground transition-transform duration-300 hover:-translate-y-0.5"
+              >
+                Book on Topmate ↗
+              </a>
+            </div>
+          </Reveal>
+
+          <Reveal delay={160}>
+            <div className="mt-12">
+              <p className="eyebrow mb-5 text-muted-foreground">Find me on</p>
+              <SocialLinks />
+            </div>
+          </Reveal>
+
+          <Reveal delay={220}>
+            <div className="mt-10 flex flex-wrap gap-3">
               <a
                 href={LINKEDIN}
                 target="_blank"
