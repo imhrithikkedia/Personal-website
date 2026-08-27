@@ -2,7 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Nav } from "@/components/site/Nav";
 import { Reveal } from "@/components/site/Reveal";
 import { Journey } from "@/components/site/Journey";
+import { SocialLinks } from "@/components/site/SocialLinks";
 import texture from "@/assets/texture.jpg";
+import portrait from "@/assets/hrithik-portrait.jpg";
 import community from "@/assets/foc-community.jpg";
 
 export const Route = createFileRoute("/")({
@@ -28,6 +30,7 @@ export const Route = createFileRoute("/")({
 const LINKEDIN = "https://www.linkedin.com/in/imhrithikkedia/";
 const LINKTREE = "https://linktr.ee/imhrithikkedia";
 const EMAIL = "mailto:hello@hrithikkedia.com";
+const TOPMATE = "https://topmate.io/imhrithikkedia";
 
 const tags = ["Founder's Office", "Business & P&L", "Strategy & Execution", "Community Building"];
 
