@@ -4,6 +4,7 @@ import { Reveal } from "./Reveal";
 import hevoLogo from "@/assets/logos/hevo.png";
 import inferlessLogo from "@/assets/logos/inferless.png";
 import pwcLogo from "@/assets/logos/pwc.png";
+import primusLogo from "@/assets/logos/primus.jpg";
 
 type Chapter = {
   id: string;
