@@ -132,7 +132,12 @@ export function Journey() {
                       <div className="mt-3 flex items-center gap-4">
                         <span className="flex size-11 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-border bg-background">
                           {c.logo ? (
-                            <img src={c.logo} alt={`${c.org} logo`} className="size-8 object-contain" loading="lazy" />
+                            <img
+                              src={c.logo}
+                              alt={`${c.org} logo`}
+                              className={cn(c.id === "primus" ? "size-full object-cover" : "size-8 object-contain")}
+                              loading="lazy"
+                            />
                           ) : (
                             <span className="display text-sm tracking-tight text-accent">{c.monogram}</span>
                           )}
