@@ -169,6 +169,13 @@ function Home() {
                 >
                   Explore my journey ↓
                 </a>
+                <a
+                  href="/cv.pdf"
+                  download
+                  className="rounded-full border border-border px-6 py-3 text-sm transition-colors hover:bg-secondary"
+                >
+                  Download CV ↓
+                </a>
               </div>
             </Reveal>
 
@@ -464,7 +471,7 @@ function Home() {
                 href={EMAIL}
                 className="rounded-full border border-border px-6 py-3 text-sm transition-colors hover:bg-secondary"
               >
-                Email
+                imhrithikkedia@gmail.com
               </a>
               <a
                 href={FOC}
@@ -472,7 +479,14 @@ function Home() {
                 rel="noreferrer noopener"
                 className="rounded-full border border-border px-6 py-3 text-sm transition-colors hover:bg-secondary"
               >
-                FOC / Community
+                FOC Community
+              </a>
+              <a
+                href="/cv.pdf"
+                download
+                className="rounded-full border border-border px-6 py-3 text-sm transition-colors hover:bg-secondary"
+              >
+                Download CV ↓
               </a>
             </div>
           </Reveal>
