@@ -22,8 +22,8 @@ type Chapter = {
 const chapters: Chapter[] = [
   {
     id: "primus",
-    org: "Primus Senior Living / Marzi",
-    monogram: "PSL",
+    org: "Primus Senior Living",
+    logo: primusLogo,
     role: "Founder's Office → Business Builder → P&L & City Leadership",
     period: "Now",
     current: true,
