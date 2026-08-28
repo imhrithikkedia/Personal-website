@@ -28,8 +28,8 @@ export const Route = createFileRoute("/")({
 });
 
 const LINKEDIN = "https://www.linkedin.com/in/imhrithikkedia/";
-const LINKTREE = "https://linktr.ee/imhrithikkedia";
-const EMAIL = "mailto:hello@hrithikkedia.com";
+const FOC = "https://linktr.ee/foc_community";
+const EMAIL = "mailto:imhrithikkedia@gmail.com";
 const TOPMATE = "https://topmate.io/imhrithikkedia";
 
 const tags = ["Founder's Office", "Business & P&L", "Strategy & Execution", "Community Building"];
@@ -333,7 +333,7 @@ function Home() {
 
               <Reveal delay={160}>
                 <a
-                  href={LINKTREE}
+                  href={FOC}
                   target="_blank"
                   rel="noreferrer noopener"
                   className="mt-10 inline-flex rounded-full bg-accent px-6 py-3 text-sm text-accent-foreground transition-transform duration-300 hover:-translate-y-0.5"
@@ -467,7 +467,7 @@ function Home() {
                 Email
               </a>
               <a
-                href={LINKTREE}
+                href={FOC}
                 target="_blank"
                 rel="noreferrer noopener"
                 className="rounded-full border border-border px-6 py-3 text-sm transition-colors hover:bg-secondary"

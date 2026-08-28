@@ -4,6 +4,7 @@ import { Reveal } from "./Reveal";
 import hevoLogo from "@/assets/logos/hevo.png";
 import inferlessLogo from "@/assets/logos/inferless.png";
 import pwcLogo from "@/assets/logos/pwc.png";
+import primusLogo from "@/assets/logos/primus.jpg";
 
 type Chapter = {
   id: string;
@@ -21,8 +22,8 @@ type Chapter = {
 const chapters: Chapter[] = [
   {
     id: "primus",
-    org: "Primus Senior Living / Marzi",
-    monogram: "PSL",
+    org: "Primus Senior Living",
+    logo: primusLogo,
     role: "Founder's Office → Business Builder → P&L & City Leadership",
     period: "Now",
     current: true,
@@ -131,7 +132,12 @@ export function Journey() {
                       <div className="mt-3 flex items-center gap-4">
                         <span className="flex size-11 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-border bg-background">
                           {c.logo ? (
-                            <img src={c.logo} alt={`${c.org} logo`} className="size-8 object-contain" loading="lazy" />
+                            <img
+                              src={c.logo}
+                              alt={`${c.org} logo`}
+                              className={cn(c.id === "primus" ? "size-full object-cover" : "size-8 object-contain")}
+                              loading="lazy"
+                            />
                           ) : (
                             <span className="display text-sm tracking-tight text-accent">{c.monogram}</span>
                           )}
