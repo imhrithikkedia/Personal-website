@@ -169,6 +169,13 @@ function Home() {
                 >
                   Explore my journey ↓
                 </a>
+                <a
+                  href="/cv.pdf"
+                  download
+                  className="rounded-full border border-border px-6 py-3 text-sm transition-colors hover:bg-secondary"
+                >
+                  Download CV ↓
+                </a>
               </div>
             </Reveal>
 
