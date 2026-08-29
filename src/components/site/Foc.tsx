@@ -115,7 +115,7 @@ function VideoCard({
 }
 
 const gallery = [
-  { src: p1.url, alt: "Full room of Founder's Office Club operators at a partner community mixer", span: "md:col-span-7 md:row-span-2", ratio: "aspect-[16/10]" },
+  { src: p1.url, alt: "Full room of Founder's Office Club operators at a partner community mixer", span: "md:col-span-7", ratio: "aspect-[16/10]" },
   { src: p2.url, alt: "Speakers and members after a Founder's Office Club community mixer panel", span: "md:col-span-5", ratio: "aspect-[4/3]" },
   { src: p3.url, alt: "Large group photo of community members at an evening FOC mixer", span: "md:col-span-5", ratio: "aspect-[4/3]" },
   { src: p4.url, alt: "Members crowded together for a group photo at an FOC meetup in a cafe", span: "md:col-span-6", ratio: "aspect-[3/2]" },
