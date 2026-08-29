@@ -2,10 +2,10 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Nav } from "@/components/site/Nav";
 import { Reveal } from "@/components/site/Reveal";
 import { Journey } from "@/components/site/Journey";
+import { Foc } from "@/components/site/Foc";
 import { SocialLinks } from "@/components/site/SocialLinks";
 import texture from "@/assets/texture.jpg";
 import portrait from "@/assets/hrithik-portrait.jpg";
-import community from "@/assets/foc-community.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -302,70 +302,7 @@ function Home() {
       </section>
 
       {/* FOC */}
-      <section id="foc" className="border-y border-border bg-primary py-24 text-primary-foreground md:py-32">
-        <div className="mx-auto max-w-6xl px-6 md:px-10">
-          <div className="grid gap-14 md:grid-cols-[1.1fr_1fr] md:gap-16">
-            <div>
-              <Reveal>
-                <p className="eyebrow text-primary-foreground/60">04 — Founder's Office Club</p>
-                <h2 className="display mt-5 text-4xl md:text-6xl">
-                  Building the community I wish I had when I started.
-                </h2>
-              </Reveal>
-
-              <Reveal delay={100}>
-                <div className="mt-8 max-w-xl space-y-5 text-[1.02rem] leading-relaxed text-primary-foreground/75">
-                  <p>
-                    While working in Founder's Office roles myself, I realised something:
-                    generalists often operate at the centre of a business, but build in isolation.
-                  </p>
-                  <p>
-                    There isn't a conventional career path. There isn't always a peer group. And
-                    most of the learning happens through trial, error, and context-switching.
-                  </p>
-                  <p className="text-primary-foreground">
-                    That's why we started Founder's Office Club (FOC).
-                  </p>
-                  <p>
-                    FOC brings together Founder's Office professionals, Chiefs of Staff, EIRs,
-                    Office-of-CxO operators, founders and aspiring generalists to share frameworks,
-                    experiences and real-world lessons.
-                  </p>
-                  <p>
-                    What started as conversations has grown into a meaningful community of people
-                    who care about building leverage — not just collecting titles.
-                  </p>
-                </div>
-              </Reveal>
-
-              <Reveal delay={160}>
-                <a
-                  href={FOC}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="mt-10 inline-flex rounded-full bg-accent px-6 py-3 text-sm text-accent-foreground transition-transform duration-300 hover:-translate-y-0.5"
-                >
-                  Explore FOC →
-                </a>
-              </Reveal>
-            </div>
-
-            <Reveal delay={120}>
-              <img
-                src={community}
-                alt="Operators and founders talking in small groups at a community meetup"
-                loading="lazy"
-                width={1600}
-                height={1000}
-                className="aspect-[4/3] w-full rounded-sm object-cover md:aspect-[3/4]"
-              />
-              <p className="mt-4 text-xs text-primary-foreground/55">
-                Conversations first. Community after.
-              </p>
-            </Reveal>
-          </div>
-        </div>
-      </section>
+      <Foc />
 
       {/* PHILOSOPHY */}
       <section className="py-24 md:py-32">
