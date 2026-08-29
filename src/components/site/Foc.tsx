@@ -114,18 +114,35 @@ function VideoCard({
   );
 }
 
-const gallery = [
-  { src: p1.url, alt: "Full room of Founder's Office Club operators at a partner community mixer", span: "md:col-span-7", ratio: "aspect-[16/10]" },
-  { src: p2.url, alt: "Speakers and members after a Founder's Office Club community mixer panel", span: "md:col-span-5", ratio: "aspect-[4/3]" },
-  { src: p3.url, alt: "Large group photo of community members at an evening FOC mixer", span: "md:col-span-5", ratio: "aspect-[4/3]" },
-  { src: p4.url, alt: "Members crowded together for a group photo at an FOC meetup in a cafe", span: "md:col-span-6", ratio: "aspect-[3/2]" },
-  { src: p5.url, alt: "Operators posing together after an FOC evening session", span: "md:col-span-6", ratio: "aspect-[3/2]" },
-  { src: p6.url, alt: "Small FOC offsite group standing together in a hall", span: "md:col-span-4", ratio: "aspect-[3/4]" },
-  { src: p7.url, alt: "Members in conversation around a long table at a coffee catch-up", span: "md:col-span-8", ratio: "aspect-[3/4] md:aspect-[16/10]" },
-  { src: p8.url, alt: "Five operators laughing around a dinner table after an FOC meetup", span: "md:col-span-5", ratio: "aspect-[4/3]" },
-  { src: p9.url, alt: "Community members standing and chatting at a small evening gathering", span: "md:col-span-7", ratio: "aspect-[4/3] md:aspect-[16/10]" },
-  { src: p10.url, alt: "Founders and operators together at a rooftop community evening", span: "md:col-span-12", ratio: "aspect-[16/9] md:aspect-[21/9]" },
+const features = [
+  {
+    src: p1.url,
+    alt: "Full room of Founder's Office Club operators at a partner community mixer",
+    span: "md:col-span-8",
+    ratio: "aspect-[16/10]",
+  },
+  {
+    src: p6.url,
+    alt: "Small FOC offsite group standing together in a hall",
+    span: "md:col-span-4",
+    ratio: "aspect-[4/5]",
+  },
 ];
+
+const mosaic = [
+  { src: p3.url, alt: "Large group photo of community members at an evening FOC mixer", ratio: "aspect-[16/10]" },
+  { src: p7.url, alt: "Members in conversation around a long table at a coffee catch-up", ratio: "aspect-[3/4]" },
+  { src: p4.url, alt: "Members crowded together for a group photo at an FOC meetup in a cafe", ratio: "aspect-[4/3]" },
+  { src: p8.url, alt: "Five operators laughing around a dinner table after an FOC meetup", ratio: "aspect-[4/5]" },
+  { src: p5.url, alt: "Operators posing together after an FOC evening session", ratio: "aspect-[3/2]" },
+  { src: p9.url, alt: "Community members standing and chatting at a small evening gathering", ratio: "aspect-[4/3]" },
+];
+
+const closer = {
+  src: p10.url,
+  alt: "Founders and operators together at a rooftop community evening",
+  ratio: "aspect-[16/9] md:aspect-[21/9]",
+};
 
 export function Foc() {
   return (
