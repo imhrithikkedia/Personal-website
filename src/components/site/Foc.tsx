@@ -210,10 +210,10 @@ export function Foc() {
           </Reveal>
 
           <div className="mt-14 grid grid-cols-1 gap-4 md:grid-cols-12 md:gap-5">
-            {gallery.map((g, i) => (
+            {features.map((g, i) => (
               <Reveal
                 key={g.src}
-                delay={(i % 3) * 70}
+                delay={i * 80}
                 className={cn("group overflow-hidden rounded-sm", g.span)}
               >
                 <img
@@ -228,7 +228,36 @@ export function Foc() {
               </Reveal>
             ))}
           </div>
+
+          <div className="mt-4 columns-1 gap-4 sm:columns-2 md:mt-5 md:columns-3 md:gap-5">
+            {mosaic.map((g) => (
+              <div key={g.src} className="group mb-4 break-inside-avoid overflow-hidden rounded-sm md:mb-5">
+                <img
+                  src={g.src}
+                  alt={g.alt}
+                  loading="lazy"
+                  className={cn(
+                    "w-full rounded-sm object-cover transition-all duration-700 group-hover:scale-[1.035] group-hover:brightness-110",
+                    g.ratio,
+                  )}
+                />
+              </div>
+            ))}
+          </div>
+
+          <Reveal className="group mt-1 overflow-hidden rounded-sm">
+            <img
+              src={closer.src}
+              alt={closer.alt}
+              loading="lazy"
+              className={cn(
+                "w-full rounded-sm object-cover transition-all duration-700 group-hover:scale-[1.02] group-hover:brightness-110",
+                closer.ratio,
+              )}
+            />
+          </Reveal>
         </div>
+
 
         {/* 3 — LEARNING TOGETHER */}
         <div className="mt-28 border-t border-primary-foreground/15 pt-16 md:mt-36 md:pt-20">
