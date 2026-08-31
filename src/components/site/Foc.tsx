@@ -247,7 +247,7 @@ export function Foc() {
           </div>
 
 
-          <Reveal className="group mt-1 overflow-hidden rounded-sm">
+          <Reveal className="group mt-4 overflow-hidden rounded-sm md:mt-5">
             <img
               src={closer.src}
               alt={closer.alt}
