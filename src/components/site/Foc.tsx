@@ -130,13 +130,14 @@ const features = [
 ];
 
 const mosaic = [
-  { src: p3.url, alt: "Large group photo of community members at an evening FOC mixer", ratio: "aspect-[16/10]" },
-  { src: p7.url, alt: "Members in conversation around a long table at a coffee catch-up", ratio: "aspect-[3/4]" },
-  { src: p4.url, alt: "Members crowded together for a group photo at an FOC meetup in a cafe", ratio: "aspect-[4/3]" },
-  { src: p8.url, alt: "Five operators laughing around a dinner table after an FOC meetup", ratio: "aspect-[4/5]" },
+  { src: p3.url, alt: "Large group photo of community members at an evening FOC mixer", ratio: "aspect-[4/5]" },
+  { src: p7.url, alt: "Members in conversation around a long table at a coffee catch-up", ratio: "aspect-[4/5]" },
+  { src: p4.url, alt: "Members crowded together for a group photo at an FOC meetup in a cafe", ratio: "aspect-[4/5]" },
+  { src: p8.url, alt: "Five operators laughing around a dinner table after an FOC meetup", ratio: "aspect-[3/2]" },
   { src: p5.url, alt: "Operators posing together after an FOC evening session", ratio: "aspect-[3/2]" },
-  { src: p9.url, alt: "Community members standing and chatting at a small evening gathering", ratio: "aspect-[4/3]" },
+  { src: p9.url, alt: "Community members standing and chatting at a small evening gathering", ratio: "aspect-[3/2]" },
 ];
+
 
 const closer = {
   src: p10.url,
@@ -229,9 +230,9 @@ export function Foc() {
             ))}
           </div>
 
-          <div className="mt-4 columns-1 gap-4 sm:columns-2 md:mt-5 md:columns-3 md:gap-5">
+          <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 md:mt-5 md:grid-cols-3 md:gap-5">
             {mosaic.map((g) => (
-              <div key={g.src} className="group mb-4 break-inside-avoid overflow-hidden rounded-sm md:mb-5">
+              <div key={g.src} className="group overflow-hidden rounded-sm">
                 <img
                   src={g.src}
                   alt={g.alt}
@@ -244,6 +245,7 @@ export function Foc() {
               </div>
             ))}
           </div>
+
 
           <Reveal className="group mt-1 overflow-hidden rounded-sm">
             <img
