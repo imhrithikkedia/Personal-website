@@ -42,6 +42,14 @@ export function Nav() {
               {l.label}
             </a>
           ))}
+          <a
+            href="/cv.pdf"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="link-underline text-sm text-foreground/80 transition-colors hover:text-accent"
+          >
+            View / Download CV ↗
+          </a>
         </div>
 
         <button

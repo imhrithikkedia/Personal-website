@@ -44,7 +44,7 @@ export const socialLinks: SocialLink[] = [
   { label: "Instagram", href: "https://instagram.com/imhrithikkedia", icon: InstagramIcon },
   { label: "X (Twitter)", href: "https://x.com/imhrithikkedia", icon: XIcon },
   { label: "Snapchat", href: "https://www.snapchat.com/add/imhrithikkedia", icon: SnapchatIcon },
-  { label: "Email", href: "mailto:imhrithikkedia@gmail.com", icon: MailIcon },
+  { label: "Email", href: "mailto:hrithikhr01@gmail.com", icon: MailIcon },
 ];
 
 export function SocialLinks({ className }: { className?: string }) {
