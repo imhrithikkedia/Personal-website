@@ -154,33 +154,21 @@ function Home() {
             </Reveal>
 
             <Reveal delay={280}>
-              <div className="mt-10 flex flex-wrap items-center gap-4">
+              <div className="mt-10 flex flex-wrap items-center gap-5">
                 <a
                   href={TOPMATE}
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="rounded-full bg-accent px-6 py-3 text-sm text-accent-foreground transition-transform duration-300 hover:-translate-y-0.5"
+                  className="group inline-flex items-center gap-3 rounded-full bg-accent px-7 py-4 text-sm text-accent-foreground transition-transform duration-300 hover:-translate-y-0.5"
                 >
-                  Book a 1:1 call ↗
+                  <span>Want to pick my brain?</span>
+                  <span aria-hidden="true">→</span>
+                  <span className="display text-base italic">Book a 1:1</span>
                 </a>
-                <a
-                  href="#journey"
-                  className="rounded-full border border-border px-6 py-3 text-sm transition-colors hover:bg-secondary"
-                >
+                <a href="#journey" className="link-underline text-sm text-muted-foreground">
                   Explore my journey ↓
                 </a>
-                <a
-                  href="/cv.pdf"
-                  download
-                  className="rounded-full border border-border px-6 py-3 text-sm transition-colors hover:bg-secondary"
-                >
-                  Download CV ↓
-                </a>
               </div>
-            </Reveal>
-
-            <Reveal delay={340}>
-              <SocialLinks className="mt-8" />
             </Reveal>
           </div>
 
