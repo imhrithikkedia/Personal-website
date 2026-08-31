@@ -75,6 +75,15 @@ export function Nav() {
               {l.label}
             </a>
           ))}
+          <a
+            href="/cv.pdf"
+            target="_blank"
+            rel="noreferrer noopener"
+            onClick={() => setOpen(false)}
+            className="block py-3 text-base text-accent"
+          >
+            View / Download CV ↗
+          </a>
         </div>
       )}
     </header>
