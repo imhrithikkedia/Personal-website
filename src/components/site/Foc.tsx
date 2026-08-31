@@ -278,11 +278,12 @@ export function Foc() {
             </div>
           </Reveal>
 
-          <div className="mt-14 grid gap-12 md:grid-cols-[1.35fr_1fr] md:gap-14">
-            <Reveal>
+          <div className="mt-14">
+            <Reveal className="mx-auto max-w-3xl">
               <VideoCard video={videos[0]!} featured />
             </Reveal>
-            <div className="grid gap-10">
+
+            <div className="mt-14 grid gap-10 sm:grid-cols-2 md:mt-16 md:grid-cols-3 md:gap-8">
               {videos.slice(1).map((v, i) => (
                 <Reveal key={v.id} delay={i * 70}>
                   <VideoCard video={v} />
