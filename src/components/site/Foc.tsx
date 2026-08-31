@@ -279,7 +279,7 @@ export function Foc() {
           </Reveal>
 
           <div className="mt-14">
-            <Reveal className="mx-auto max-w-3xl">
+            <Reveal>
               <VideoCard video={videos[0]!} featured />
             </Reveal>
 
