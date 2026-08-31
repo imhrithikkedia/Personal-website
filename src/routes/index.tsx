@@ -154,33 +154,21 @@ function Home() {
             </Reveal>
 
             <Reveal delay={280}>
-              <div className="mt-10 flex flex-wrap items-center gap-4">
+              <div className="mt-10 flex flex-wrap items-center gap-5">
                 <a
                   href={TOPMATE}
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="rounded-full bg-accent px-6 py-3 text-sm text-accent-foreground transition-transform duration-300 hover:-translate-y-0.5"
+                  className="group inline-flex items-center gap-3 rounded-full bg-accent px-7 py-4 text-sm text-accent-foreground transition-transform duration-300 hover:-translate-y-0.5"
                 >
-                  Book a 1:1 call ↗
+                  <span>Want to pick my brain?</span>
+                  <span aria-hidden="true">→</span>
+                  <span className="display text-base italic">Book a 1:1</span>
                 </a>
-                <a
-                  href="#journey"
-                  className="rounded-full border border-border px-6 py-3 text-sm transition-colors hover:bg-secondary"
-                >
+                <a href="#journey" className="link-underline text-sm text-muted-foreground">
                   Explore my journey ↓
                 </a>
-                <a
-                  href="/cv.pdf"
-                  download
-                  className="rounded-full border border-border px-6 py-3 text-sm transition-colors hover:bg-secondary"
-                >
-                  Download CV ↓
-                </a>
               </div>
-            </Reveal>
-
-            <Reveal delay={340}>
-              <SocialLinks className="mt-8" />
             </Reveal>
           </div>
 
@@ -355,85 +343,102 @@ function Home() {
         </div>
       </section>
 
-      {/* CONTACT */}
-      <section id="contact" className="py-24 md:py-36">
+      {/* VALUE + SOCIAL PROOF */}
+      <section id="contact" className="border-t border-border py-24 md:py-36">
         <div className="mx-auto max-w-5xl px-6 md:px-10">
           <Reveal>
-            <p className="eyebrow">07 — Let's talk</p>
-            <p className="display mt-6 max-w-4xl text-3xl leading-tight md:text-6xl">
-              If you're building something interesting, figuring something messy out, or just want
-              to talk careers, chaos and clarity — <span className="italic text-accent">let's chat.</span>
-            </p>
+            <p className="eyebrow">07 — Worth a conversation?</p>
+            <h2 className="display mt-6 max-w-4xl text-3xl leading-tight md:text-5xl">
+              Sometimes 30 minutes can save you{" "}
+              <span className="italic text-accent">6 months of figuring it out yourself.</span>
+            </h2>
           </Reveal>
 
-          <Reveal delay={100}>
-            <div className="mt-12 flex flex-col gap-6 rounded-sm border border-accent/40 bg-secondary/40 p-6 sm:flex-row sm:items-center sm:justify-between md:p-8">
-              <div>
-                <p className="eyebrow text-accent">Topmate</p>
-                <p className="display mt-2 text-2xl md:text-3xl">Want direct access?</p>
-                <p className="mt-2 max-w-md text-sm leading-relaxed text-foreground/70">
-                  Book a 1:1 call or send a Priority DM — careers, Founder's Office, building as a
-                  generalist, or FOC.
+          <div className="mt-12 grid gap-12 md:grid-cols-[1.1fr_1fr]">
+            <Reveal delay={80}>
+              <div className="space-y-4 text-[1.02rem] leading-relaxed text-foreground/75">
+                <p>
+                  I've spent the last few years navigating Founder's Office, Business Operations,
+                  GTM, growth, P&amp;Ls, partnerships and the wonderfully messy space in between.
+                </p>
+                <p>
+                  I've also spent a lot of time helping people think through careers in the
+                  Founder's Office / CoS / EIR ecosystem.
+                </p>
+                <p>
+                  If you're at a point where you're trying to figure something out, I'm happy to
+                  share the context, mistakes and lessons I've picked up along the way.
                 </p>
               </div>
-              <a
-                href={TOPMATE}
-                target="_blank"
-                rel="noreferrer noopener"
-                className="inline-flex shrink-0 items-center justify-center rounded-full bg-accent px-6 py-3 text-sm text-accent-foreground transition-transform duration-300 hover:-translate-y-0.5"
-              >
-                Book on Topmate ↗
-              </a>
-            </div>
-          </Reveal>
 
-          <Reveal delay={160}>
-            <div className="mt-12">
-              <p className="eyebrow mb-5 text-muted-foreground">Find me on</p>
-              <SocialLinks />
-            </div>
-          </Reveal>
+              <ul className="mt-10 space-y-1">
+                {conversations.map((c) => (
+                  <li
+                    key={c}
+                    className="border-b border-border/70 py-3 text-[0.97rem] text-foreground/80"
+                  >
+                    “{c}”
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
 
-          <Reveal delay={220}>
-            <div className="mt-10 flex flex-wrap gap-3">
-              <a
-                href={LINKEDIN}
-                target="_blank"
-                rel="noreferrer noopener"
-                className="rounded-full bg-primary px-6 py-3 text-sm text-primary-foreground transition-transform duration-300 hover:-translate-y-0.5"
-              >
-                LinkedIn
-              </a>
-              <a
-                href={EMAIL}
-                className="rounded-full border border-border px-6 py-3 text-sm transition-colors hover:bg-secondary"
-              >
-                imhrithikkedia@gmail.com
-              </a>
-              <a
-                href={FOC}
-                target="_blank"
-                rel="noreferrer noopener"
-                className="rounded-full border border-border px-6 py-3 text-sm transition-colors hover:bg-secondary"
-              >
-                FOC Community
-              </a>
-              <a
-                href="/cv.pdf"
-                download
-                className="rounded-full border border-border px-6 py-3 text-sm transition-colors hover:bg-secondary"
-              >
-                Download CV ↓
-              </a>
-            </div>
-          </Reveal>
+            <Reveal delay={140}>
+              <div className="rounded-sm border border-border bg-secondary/40 p-6 md:p-8">
+                <p className="eyebrow text-accent">On Topmate</p>
+                <p className="display mt-3 text-3xl md:text-4xl">5.0 / 5</p>
+                <p className="mt-1 text-sm text-muted-foreground">24 ratings · 21 testimonials</p>
+
+                <div className="mt-8 space-y-7">
+                  {testimonials.map((t) => (
+                    <blockquote key={t.name} className="border-t border-border/70 pt-5">
+                      <p className="text-[0.97rem] leading-relaxed text-foreground/80">“{t.quote}”</p>
+                      <footer className="mt-3 font-mono text-xs text-muted-foreground">
+                        — {t.name}
+                      </footer>
+                    </blockquote>
+                  ))}
+                </div>
+
+                <a
+                  href={TOPMATE}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="link-underline mt-8 inline-block text-sm text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  Available for 1:1 conversations on Topmate ↗
+                </a>
+              </div>
+            </Reveal>
+          </div>
         </div>
       </section>
 
-      <footer className="border-t border-border py-10">
-        <div className="mx-auto flex max-w-5xl flex-col gap-3 px-6 text-xs text-muted-foreground md:flex-row md:items-center md:justify-between md:px-10">
-          <p>© {new Date().getFullYear()} Hrithik Kedia — a personal operating story.</p>
-          <p>Generalist Operator · Founder's Office · Community Builder</p>
+      <footer className="border-t border-border py-14">
+        <div className="mx-auto max-w-5xl px-6 md:px-10">
+          <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p className="eyebrow mb-5 text-muted-foreground">Find me on</p>
+              <SocialLinks />
+              <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground">
+                <a
+                  href={LINKEDIN}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="link-underline hover:text-foreground"
+                >
+                  LinkedIn ↗
+                </a>
+                <a href={EMAIL} className="link-underline hover:text-foreground">
+                  Email ↗
+                </a>
+              </div>
+            </div>
+            <div className="flex flex-col gap-2 text-xs text-muted-foreground md:items-end">
+              <p>© {new Date().getFullYear()} Hrithik Kedia — a personal operating story.</p>
+              <p>Generalist Operator · Founder's Office · Community Builder</p>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
