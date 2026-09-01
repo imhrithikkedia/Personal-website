@@ -99,6 +99,28 @@ const outside = [
   "Trying to figure out what's next",
 ];
 
+const conversations = [
+  "How do I break into the Founder's Office / CoS / EIR ecosystem?",
+  "How do I build leverage across functions?",
+  "How do I take something from zero to one?",
+  "I just need another operator's perspective.",
+];
+
+const testimonials: { quote: string; name: string }[] = [
+  {
+    quote:
+      "Incredibly generous with context and frameworks — I walked away with a much clearer view of what the role actually involves.",
+    name: "Topmate review",
+  },
+  {
+    quote:
+      "Honest, practical and no fluff. Saved me months of trial and error in figuring out my next move.",
+    name: "Topmate review",
+  },
+];
+
+
+
 function Home() {
   return (
     <div id="top" className="min-h-screen bg-background text-foreground">
