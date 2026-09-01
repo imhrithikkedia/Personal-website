@@ -27,9 +27,6 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-const LINKEDIN = "https://www.linkedin.com/in/imhrithikkedia/";
-const FOC = "https://linktr.ee/foc_community";
-const EMAIL = "mailto:imhrithikkedia@gmail.com";
 const TOPMATE = "https://topmate.io/imhrithikkedia";
 
 const tags = ["Founder's Office", "Business & P&L", "Strategy & Execution", "Community Building"];
