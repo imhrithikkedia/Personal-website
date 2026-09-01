@@ -422,14 +422,9 @@ function Home() {
                   ))}
                 </div>
 
-                <a
-                  href={TOPMATE}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="link-underline mt-8 inline-block text-sm text-muted-foreground transition-colors hover:text-foreground"
-                >
-                  Available for 1:1 conversations on Topmate ↗
-                </a>
+                <p className="mt-8 text-sm text-muted-foreground">
+                  Based on 1:1 conversations on Topmate.
+                </p>
               </div>
             </Reveal>
           </div>
@@ -438,23 +433,16 @@ function Home() {
 
       <footer className="border-t border-border py-14">
         <div className="mx-auto max-w-5xl px-6 md:px-10">
+          <a
+            href="#top"
+            className="link-underline mb-10 inline-block text-sm text-muted-foreground transition-colors hover:text-foreground"
+          >
+            ↑ Back to top
+          </a>
           <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="eyebrow mb-5 text-muted-foreground">Find me on</p>
               <SocialLinks />
-              <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground">
-                <a
-                  href={LINKEDIN}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="link-underline hover:text-foreground"
-                >
-                  LinkedIn ↗
-                </a>
-                <a href={EMAIL} className="link-underline hover:text-foreground">
-                  Email ↗
-                </a>
-              </div>
             </div>
             <div className="flex flex-col gap-2 text-xs text-muted-foreground md:items-end">
               <p>© {new Date().getFullYear()} Hrithik Kedia — a personal operating story.</p>
