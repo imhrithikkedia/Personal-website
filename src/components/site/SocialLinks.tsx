@@ -26,11 +26,6 @@ const XIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-const SnapchatIcon = ({ className }: { className?: string }) => (
-  <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
-    <path d="M12 2.2c3.4 0 5.6 2.4 5.6 5.7 0 .4 0 .9-.05 1.4.15.05.35.02.6-.08.2-.08.5-.18.8-.18.55 0 .98.35.98.85 0 .38-.33.65-.9.94-.75.4-1.7.94-1.7 1.57 0 .28.15.55.34.85.62 1 1.6 2.26 3.35 2.55.4.06.6.38.53.68-.12.5-.75.82-1.75 1.05-.14.36-.24.84-.33 1.23-.05.28-.3.47-.72.47-.18 0-.38-.03-.58-.07-.32-.07-.7-.15-1.32-.15-.3 0-.63.04-.97.13-.62.16-1.43 1.13-3.13 1.13-.04 0-.09 0-.13 0-.05 0-.09 0-.13 0-1.7 0-2.51-.97-3.13-1.13-.34-.09-.67-.13-.97-.13-.62 0-1 .08-1.32.15-.2.04-.4.07-.58.07-.42 0-.67-.19-.72-.47-.09-.39-.19-.87-.33-1.23-1-.23-1.63-.55-1.75-1.05-.07-.3.13-.62.53-.68 1.75-.29 2.73-1.55 3.35-2.55.19-.3.34-.57.34-.85 0-.63-.95-1.17-1.7-1.57-.57-.29-.9-.56-.9-.94 0-.5.43-.85.98-.85.3 0 .6.1.8.18.25.1.45.13.6.08-.05-.5-.05-1-.05-1.4C6.4 4.6 8.6 2.2 12 2.2z" />
-  </svg>
-);
 
 const MailIcon = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className={className} aria-hidden="true">
@@ -43,7 +38,6 @@ export const socialLinks: SocialLink[] = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/imhrithikkedia", icon: LinkedinIcon },
   { label: "Instagram", href: "https://instagram.com/imhrithikkedia", icon: InstagramIcon },
   { label: "X (Twitter)", href: "https://x.com/imhrithikkedia", icon: XIcon },
-  { label: "Snapchat", href: "https://www.snapchat.com/add/imhrithikkedia", icon: SnapchatIcon },
   { label: "Email", href: "mailto:hrithikhr01@gmail.com", icon: MailIcon },
 ];
 
