@@ -13,6 +13,7 @@ type Chapter = {
   period: string;
   theme: string;
   intro?: string;
+  stages?: { label: string; text: string }[];
   points: string[];
   current?: boolean;
   logo?: string;
@@ -30,18 +31,29 @@ const chapters: Chapter[] = [
     theme: "Every few months, a different problem. The mission stayed the same: move the business forward.",
     intro:
       "The longest and most significant chapter so far — one that kept changing shape as the business did.",
+    stages: [
+      {
+        label: "Learn",
+        text: "Real estate fundamentals, FSI/FAR, land economics, JD/JV/DM structures, DCF, IRR and cash flows.",
+      },
+      {
+        label: "Build",
+        text: "Evaluating expansion opportunities across cities, working on travel/category P&L, marketing/referral channels, partnerships and special projects.",
+      },
+      {
+        label: "Own",
+        text: "Taking ownership of city-level P&L and Founder's Office responsibilities.",
+      },
+    ],
     points: [
-      "Started by jumping into business development and expansion opportunities",
-      "Learned real estate fundamentals, partnership structures, financial modelling, DCFs and IRRs",
-      "Evaluated opportunities across multiple cities and contributed to deal evaluation",
+      "Started by jumping into business development and deal evaluation",
       "Moved across marketing and growth — referral marketing, influencer campaigns, content, BTL and multi-city initiatives",
-      "Took ownership of a travel category and P&L for the 50+ demographic",
-      "Piloted domestic travel experiences with ~20% CM1 before a strategic reset",
+      "Piloted domestic travel experiences for the 50+ demographic before a strategic reset",
       "Worked on strategic projects across CX, operations, digital transformation, M&A and new initiatives",
       "Built partnerships and alliances with multiple brands",
-      "Currently continuing the journey in a business / P&L leadership capacity",
     ],
   },
+
   {
     id: "hevo",
     org: "Hevo Data",
@@ -84,6 +96,15 @@ const chapters: Chapter[] = [
     points: [],
   },
 ];
+
+const proof = [
+  "10+ deals evaluated in my first quarter at Primus",
+  "Expansion opportunities across 7+ cities",
+  "~20% CM1 achieved across 6 domestic trips in the travel category",
+  "1.2k+ Topmate bookings",
+  "40 testimonials on Topmate",
+];
+
 
 export function Journey() {
   const [openId, setOpenId] = useState<string>("primus");
@@ -163,6 +184,19 @@ export function Journey() {
                             {c.intro}
                           </p>
                         )}
+                        {c.stages && (
+                          <ol className="mt-8 grid gap-6 md:grid-cols-3">
+                            {c.stages.map((s) => (
+                              <li key={s.label} className="border-t border-border pt-4">
+                                <p className="eyebrow text-accent">{s.label}</p>
+                                <p className="mt-3 text-[0.94rem] leading-relaxed text-foreground/75">
+                                  {s.text}
+                                </p>
+                              </li>
+                            ))}
+                          </ol>
+                        )}
+
                         {c.points.length > 0 && (
                           <ul className="mt-6 max-w-2xl space-y-3">
                             {c.points.map((p) => (
@@ -184,7 +218,27 @@ export function Journey() {
             );
           })}
         </div>
+
+        <Reveal>
+          <div className="border-t border-border pt-12">
+            <h3 className="display max-w-xl text-3xl md:text-4xl">A few things I'm proud of.</h3>
+            <ul className="mt-8 grid gap-x-14 gap-y-1 md:grid-cols-2">
+              {proof.map((p, i) => (
+                <li
+                  key={p}
+                  className="flex items-baseline gap-4 border-b border-border/60 py-4 text-[0.97rem] leading-relaxed text-foreground/80"
+                >
+                  <span className="font-mono text-xs text-muted-foreground">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span>{p}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Reveal>
       </div>
+
     </section>
   );
 }

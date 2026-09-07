@@ -106,15 +106,21 @@ const conversations = [
 const testimonials: { quote: string; name: string }[] = [
   {
     quote:
-      "Incredibly generous with context and frameworks — I walked away with a much clearer view of what the role actually involves.",
-    name: "Topmate review",
+      "Firstly, big shoutout for the amazing work at the FOC community. I had a good session preparing for my upcoming interviews where we discussed in detail of my overall trajectory. Received honest feedbacks and his insights on tough questions was impressive. Would highly recommend.",
+    name: "Ankit Balwada",
   },
   {
     quote:
-      "Honest, practical and no fluff. Saved me months of trial and error in figuring out my next move.",
-    name: "Topmate review",
+      "Hrithik's advice on building a career in a founder's office role is valuable. He's helped me understand what it takes to succeed in this role.",
+    name: "Priti Mistry",
+  },
+  {
+    quote:
+      "Thank you for sharing your expertise on career development and networking. Your guidance will help me build a strong personal brand and advance my career.",
+    name: "Shresth Bir",
   },
 ];
+
 
 
 
