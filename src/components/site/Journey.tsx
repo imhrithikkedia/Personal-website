@@ -97,6 +97,15 @@ const chapters: Chapter[] = [
   },
 ];
 
+const proof = [
+  "10+ deals evaluated in my first quarter at Primus",
+  "Expansion opportunities across 7+ cities",
+  "~20% CM1 achieved across 6 domestic trips in the travel category",
+  "1.2k+ Topmate bookings",
+  "40 testimonials on Topmate",
+];
+
+
 export function Journey() {
   const [openId, setOpenId] = useState<string>("primus");
 
