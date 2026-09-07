@@ -13,6 +13,7 @@ type Chapter = {
   period: string;
   theme: string;
   intro?: string;
+  stages?: { label: string; text: string }[];
   points: string[];
   current?: boolean;
   logo?: string;
@@ -30,18 +31,29 @@ const chapters: Chapter[] = [
     theme: "Every few months, a different problem. The mission stayed the same: move the business forward.",
     intro:
       "The longest and most significant chapter so far — one that kept changing shape as the business did.",
+    stages: [
+      {
+        label: "Learn",
+        text: "Real estate fundamentals, FSI/FAR, land economics, JD/JV/DM structures, DCF, IRR and cash flows.",
+      },
+      {
+        label: "Build",
+        text: "Evaluating expansion opportunities across cities, working on travel/category P&L, marketing/referral channels, partnerships and special projects.",
+      },
+      {
+        label: "Own",
+        text: "Taking ownership of city-level P&L and Founder's Office responsibilities.",
+      },
+    ],
     points: [
-      "Started by jumping into business development and expansion opportunities",
-      "Learned real estate fundamentals, partnership structures, financial modelling, DCFs and IRRs",
-      "Evaluated opportunities across multiple cities and contributed to deal evaluation",
+      "Started by jumping into business development and deal evaluation",
       "Moved across marketing and growth — referral marketing, influencer campaigns, content, BTL and multi-city initiatives",
-      "Took ownership of a travel category and P&L for the 50+ demographic",
-      "Piloted domestic travel experiences with ~20% CM1 before a strategic reset",
+      "Piloted domestic travel experiences for the 50+ demographic before a strategic reset",
       "Worked on strategic projects across CX, operations, digital transformation, M&A and new initiatives",
       "Built partnerships and alliances with multiple brands",
-      "Currently continuing the journey in a business / P&L leadership capacity",
     ],
   },
+
   {
     id: "hevo",
     org: "Hevo Data",
