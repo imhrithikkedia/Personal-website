@@ -175,6 +175,19 @@ export function Journey() {
                             {c.intro}
                           </p>
                         )}
+                        {c.stages && (
+                          <ol className="mt-8 grid gap-6 md:grid-cols-3">
+                            {c.stages.map((s) => (
+                              <li key={s.label} className="border-t border-border pt-4">
+                                <p className="eyebrow text-accent">{s.label}</p>
+                                <p className="mt-3 text-[0.94rem] leading-relaxed text-foreground/75">
+                                  {s.text}
+                                </p>
+                              </li>
+                            ))}
+                          </ol>
+                        )}
+
                         {c.points.length > 0 && (
                           <ul className="mt-6 max-w-2xl space-y-3">
                             {c.points.map((p) => (
