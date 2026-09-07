@@ -209,7 +209,27 @@ export function Journey() {
             );
           })}
         </div>
+
+        <Reveal>
+          <div className="border-t border-border pt-12">
+            <h3 className="display max-w-xl text-3xl md:text-4xl">A few things I'm proud of.</h3>
+            <ul className="mt-8 grid gap-x-14 gap-y-1 md:grid-cols-2">
+              {proof.map((p, i) => (
+                <li
+                  key={p}
+                  className="flex items-baseline gap-4 border-b border-border/60 py-4 text-[0.97rem] leading-relaxed text-foreground/80"
+                >
+                  <span className="font-mono text-xs text-muted-foreground">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span>{p}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Reveal>
       </div>
+
     </section>
   );
 }
