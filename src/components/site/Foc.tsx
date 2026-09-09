@@ -13,7 +13,7 @@ import p8 from "@/assets/foc/img3812.jpeg.asset.json";
 import p9 from "@/assets/foc/img2980.jpeg.asset.json";
 import p10 from "@/assets/foc/img4625.jpeg.asset.json";
 
-const FOC_LINK = "https://linktr.ee/foc_community";
+const FOC_LINK = "https://foccommunity.com/";
 
 const videos = [
   {
