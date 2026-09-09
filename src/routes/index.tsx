@@ -3,6 +3,7 @@ import { Nav } from "@/components/site/Nav";
 import { Reveal } from "@/components/site/Reveal";
 import { Journey } from "@/components/site/Journey";
 import { Foc } from "@/components/site/Foc";
+import { Ideas } from "@/components/site/Ideas";
 import { SocialLinks } from "@/components/site/SocialLinks";
 import texture from "@/assets/texture.jpg";
 import portrait from "@/assets/hrithik-portrait.jpg";
@@ -193,6 +194,14 @@ function Home() {
                 <a href="#journey" className="link-underline text-sm text-muted-foreground">
                   Explore my journey ↓
                 </a>
+                <a
+                  href="/cv.pdf"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="link-underline text-sm text-muted-foreground"
+                >
+                  View / Download CV ↗
+                </a>
               </div>
             </Reveal>
           </div>
@@ -314,6 +323,9 @@ function Home() {
         </div>
       </section>
 
+      {/* THINGS I MIGHT BUILD */}
+      <Ideas />
+
       {/* FOC */}
       <Foc />
 
@@ -321,7 +333,7 @@ function Home() {
       <section className="py-24 md:py-32">
         <div className="mx-auto max-w-6xl px-6 md:px-10">
           <Reveal>
-            <p className="eyebrow">05 — My operating philosophy</p>
+            <p className="eyebrow">06 — My operating philosophy</p>
             <h2 className="display mt-5 max-w-2xl text-4xl md:text-6xl">Four things I keep coming back to.</h2>
           </Reveal>
 
@@ -345,7 +357,7 @@ function Home() {
       <section className="border-t border-border bg-secondary/40 py-24 md:py-32">
         <div className="mx-auto max-w-5xl px-6 md:px-10">
           <Reveal>
-            <p className="eyebrow">06 — Outside the spreadsheet</p>
+            <p className="eyebrow">07 — Outside the spreadsheet</p>
             <h2 className="display mt-5 max-w-2xl text-4xl md:text-5xl">
               When I'm not jumping between business problems…
             </h2>
@@ -372,7 +384,7 @@ function Home() {
       <section id="contact" className="border-t border-border py-24 md:py-36">
         <div className="mx-auto max-w-5xl px-6 md:px-10">
           <Reveal>
-            <p className="eyebrow">07 — Worth a conversation?</p>
+            <p className="eyebrow">08 — Worth a conversation?</p>
             <h2 className="display mt-6 max-w-4xl text-3xl leading-tight md:text-5xl">
               Sometimes 30 minutes can save you{" "}
               <span className="italic text-accent">6 months of figuring it out yourself.</span>
@@ -411,8 +423,10 @@ function Home() {
             <Reveal delay={140}>
               <div className="rounded-sm border border-border bg-secondary/40 p-6 md:p-8">
                 <p className="eyebrow text-accent">On Topmate</p>
-                <p className="display mt-3 text-3xl md:text-4xl">5.0 / 5</p>
-                <p className="mt-1 text-sm text-muted-foreground">24 ratings · 21 testimonials</p>
+                <p className="display mt-3 text-3xl md:text-4xl">4.9 / 5</p>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  50 ratings · 1.2k+ bookings · 40 testimonials
+                </p>
 
                 <div className="mt-8 space-y-7">
                   {testimonials.map((t) => (
