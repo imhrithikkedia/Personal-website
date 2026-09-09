@@ -27,6 +27,12 @@ const XIcon = ({ className }: { className?: string }) => (
 );
 
 
+const SnapchatIcon = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+    <path d="M12 2.2c2.6 0 4.3 1.9 4.4 4.5 0 .6-.05 1.3-.1 1.9.3.15.7.15 1.1 0 .2-.1.4-.1.6 0 .4.15.6.5.5.9-.15.6-1 1-1.7 1.3-.3.1-.5.25-.45.55.35 1.7 2 3.2 3.4 3.6.35.1.5.35.4.7-.25.8-1.6 1.05-2.4 1.15-.3.05-.35.3-.4.6-.05.35-.15.7-.6.7-.6 0-1.3-.2-2.1 0-.7.15-1.2.6-1.8 1-.6.4-1.3.7-2.15.7s-1.55-.3-2.15-.7c-.6-.4-1.1-.85-1.8-1-.8-.2-1.5 0-2.1 0-.45 0-.55-.35-.6-.7-.05-.3-.1-.55-.4-.6-.8-.1-2.15-.35-2.4-1.15-.1-.35.05-.6.4-.7 1.4-.4 3.05-1.9 3.4-3.6.05-.3-.15-.45-.45-.55-.7-.3-1.55-.7-1.7-1.3-.1-.4.1-.75.5-.9.2-.1.4-.1.6 0 .4.15.8.15 1.1 0-.05-.6-.1-1.3-.1-1.9C7.7 4.1 9.4 2.2 12 2.2z" />
+  </svg>
+);
+
 const MailIcon = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className={className} aria-hidden="true">
     <rect x="2.5" y="4.5" width="19" height="15" rx="3" />
@@ -38,6 +44,7 @@ export const socialLinks: SocialLink[] = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/imhrithikkedia", icon: LinkedinIcon },
   { label: "Instagram", href: "https://instagram.com/imhrithikkedia", icon: InstagramIcon },
   { label: "X (Twitter)", href: "https://x.com/imhrithikkedia", icon: XIcon },
+  { label: "Snapchat", href: "https://www.snapchat.com/add/imhrithikkedia", icon: SnapchatIcon },
   { label: "Email", href: "mailto:hrithikhr01@gmail.com", icon: MailIcon },
 ];
 
