@@ -437,7 +437,23 @@ function Home() {
               </div>
             </Reveal>
           </div>
+
+          <Reveal delay={200}>
+            <div className="mt-14 flex flex-wrap items-center gap-5">
+              <a
+                href={TOPMATE}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="group inline-flex items-center gap-3 rounded-full bg-accent px-7 py-4 text-sm text-accent-foreground transition-transform duration-300 hover:-translate-y-0.5"
+              >
+                <span>Want to pick my brain?</span>
+                <span aria-hidden="true">→</span>
+                <span className="display text-base italic">Book a 1:1</span>
+              </a>
+            </div>
+          </Reveal>
         </div>
+
       </section>
 
       <footer className="border-t border-border py-14">
