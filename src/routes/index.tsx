@@ -236,7 +236,7 @@ function Home() {
       </section>
 
       {/* ABOUT */}
-      <section id="about" className="py-24 md:py-32">
+      <section id="about" className="py-16 md:py-24">
         <div className="mx-auto max-w-5xl px-6 md:px-10">
           <Reveal>
             <p className="eyebrow">01 — The generalist advantage</p>
@@ -285,7 +285,7 @@ function Home() {
       <Journey />
 
       {/* BUILT & OWNED */}
-      <section id="owned" className="py-24 md:py-32">
+      <section id="owned" className="py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-6 md:px-10">
           <Reveal>
             <p className="eyebrow">03 — Things I've built &amp; owned</p>
@@ -322,7 +322,7 @@ function Home() {
 
 
       {/* PHILOSOPHY */}
-      <section className="py-24 md:py-32">
+      <section className="py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-6 md:px-10">
           <Reveal>
             <p className="eyebrow">06 — My operating philosophy</p>
@@ -346,7 +346,7 @@ function Home() {
       </section>
 
       {/* OUTSIDE THE SPREADSHEET */}
-      <section className="border-t border-border bg-secondary/40 py-24 md:py-32">
+      <section className="border-t border-border bg-secondary/40 py-16 md:py-24">
         <div className="mx-auto max-w-5xl px-6 md:px-10">
           <Reveal>
             <p className="eyebrow">07 — Outside the spreadsheet</p>
@@ -373,7 +373,7 @@ function Home() {
       </section>
 
       {/* VALUE + SOCIAL PROOF */}
-      <section id="contact" className="border-t border-border py-24 md:py-36">
+      <section id="contact" className="border-t border-border py-16 md:py-28">
         <div className="mx-auto max-w-5xl px-6 md:px-10">
           <Reveal>
             <p className="eyebrow">08 — Worth a conversation?</p>

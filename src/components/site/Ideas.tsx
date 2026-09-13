@@ -374,7 +374,7 @@ function IdeaCard({ idea, delay }: { idea: Idea; delay: number }) {
 
 export function Ideas() {
   return (
-    <section id="ideas" className="border-t border-border py-24 md:py-32">
+    <section id="ideas" className="border-t border-border py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-6 md:px-10">
         <Reveal>
           <p className="eyebrow">04 — Things I might build</p>
@@ -396,7 +396,7 @@ export function Ideas() {
         </div>
 
         <Reveal>
-          <div className="mt-20 border-t border-border pt-10">
+          <div className="mt-14 border-t border-border pt-8">
             <p className="display max-w-3xl text-2xl leading-snug md:text-4xl">
               Most of these will probably never get built. That's kind of the point.
             </p>

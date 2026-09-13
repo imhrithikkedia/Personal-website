@@ -110,7 +110,7 @@ export function Journey() {
   const [openId, setOpenId] = useState<string>("primus");
 
   return (
-    <section id="journey" className="border-t border-border bg-secondary/40 py-24 md:py-32">
+    <section id="journey" className="border-t border-border bg-secondary/40 py-16 md:py-24">
       <div className="mx-auto max-w-5xl px-6 md:px-10">
         <Reveal>
           <p className="eyebrow">02 — The journey</p>
@@ -119,7 +119,7 @@ export function Journey() {
           </h2>
         </Reveal>
 
-        <div className="mt-16 md:mt-20">
+        <div className="mt-12 md:mt-16">
           {chapters.map((c, i) => {
             const isOpen = openId === c.id;
             return (

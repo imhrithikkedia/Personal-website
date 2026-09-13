@@ -201,7 +201,7 @@ export function Foc() {
         </div>
 
         {/* 2 — FOC IN ACTION */}
-        <div className="mt-28 md:mt-36">
+        <div className="mt-20 md:mt-24">
           <Reveal>
             <h3 className="display max-w-2xl text-3xl md:text-5xl">More than a WhatsApp group.</h3>
             <p className="mt-6 max-w-2xl text-[1.02rem] leading-relaxed text-primary-foreground/70">
@@ -262,7 +262,7 @@ export function Foc() {
 
 
         {/* 3 — LEARNING TOGETHER */}
-        <div className="mt-28 border-t border-primary-foreground/15 pt-16 md:mt-36 md:pt-20">
+        <div className="mt-20 border-t border-primary-foreground/15 pt-12 md:mt-24 md:pt-16">
           <Reveal>
             <p className="eyebrow text-primary-foreground/60">Learning together</p>
             <h3 className="display mt-5 max-w-2xl text-3xl md:text-5xl">
@@ -294,7 +294,7 @@ export function Foc() {
         </div>
 
         {/* 4 — A SMALL COMMUNITY MOMENT */}
-        <div className="mt-28 md:mt-36">
+        <div className="mt-20 md:mt-24">
           <Reveal>
             <blockquote className="mx-auto max-w-4xl text-center">
               <p className="display text-3xl leading-tight md:text-5xl">
