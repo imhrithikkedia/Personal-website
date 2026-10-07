@@ -377,7 +377,7 @@ export function Ideas() {
     <section id="ideas" className="border-t border-border py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-6 md:px-10">
         <Reveal>
-          <p className="eyebrow">04 — Things I might build</p>
+          <p className="eyebrow">05 — Things I might build</p>
           <h2 className="display mt-5 max-w-3xl text-4xl md:text-6xl">Things I might build.</h2>
           <p className="display mt-6 max-w-2xl text-xl italic text-accent md:text-2xl">
             I have a bad habit of spotting problems and immediately wondering if there's a business

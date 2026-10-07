@@ -156,7 +156,7 @@ export function Foc() {
         <div className="grid gap-14 md:grid-cols-[1.1fr_1fr] md:gap-16">
           <div>
             <Reveal>
-              <p className="eyebrow text-primary-foreground/60">05 — Founder's Office Club</p>
+              <p className="eyebrow text-primary-foreground/60">04 — Founder's Office Club</p>
               <h2 className="display mt-5 text-4xl md:text-6xl">
                 Building the community I wish I had when I started.
               </h2>
