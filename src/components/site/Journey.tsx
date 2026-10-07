@@ -142,7 +142,7 @@ export function Journey() {
                     )}
                   </div>
 
-                  <div className="pb-12 md:pb-16">
+                  <div className="pb-8 md:pb-10">
                     <button
                       type="button"
                       onClick={() => setOpenId(isOpen ? "" : c.id)}

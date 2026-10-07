@@ -4,7 +4,7 @@ import { Reveal } from "@/components/site/Reveal";
 import { Journey } from "@/components/site/Journey";
 import { Foc } from "@/components/site/Foc";
 import { Ideas } from "@/components/site/Ideas";
-import { SocialLinks } from "@/components/site/SocialLinks";
+import { HeroSocialLinks, SocialLinks } from "@/components/site/SocialLinks";
 import texture from "@/assets/texture.jpg";
 import portrait from "@/assets/hrithik-portrait.jpg";
 
@@ -29,8 +29,6 @@ export const Route = createFileRoute("/")({
 });
 
 const TOPMATE = "https://topmate.io/imhrithikkedia";
-
-const tags = ["Founder's Office", "Business & P&L", "Strategy & Execution", "Community Building"];
 
 const owned = [
   {
@@ -89,12 +87,20 @@ const principles = [
 ];
 
 const outside = [
-  "Building and experimenting with communities",
-  "Meeting founders, operators and interesting people",
-  "Thinking and talking about careers in the generalist ecosystem",
-  "Occasionally getting in front of the camera for things I never expected to be doing at work",
-  "Travelling and collecting experiences",
-  "Trying to figure out what's next",
+  { title: "Exploring new places for food", text: "I like exploring new places for food." },
+  { title: "Playing badminton", text: "I like playing badminton." },
+  { title: "Going for a swim", text: "I like going for swimming some days." },
+  { title: "Playing Counter-Strike", text: "I like playing Counter-Strike." },
+  { title: "Playing 8-Ball Pool", text: "I like playing 8-Ball Pool." },
+  {
+    title: "Being a bathroom singer",
+    text: "Some days I’m a bathroom singer. Very occasionally, I actually record it.",
+  },
+  {
+    title: "Stand-up, movies & interesting things",
+    text: "I like going for stand-up comedy, watching movies, or showing up if there’s something interesting happening.",
+  },
+  { title: "Travelling & collecting experiences", text: "I like travelling and collecting experiences." },
 ];
 
 const conversations = [
@@ -167,16 +173,7 @@ function Home() {
             </Reveal>
 
             <Reveal delay={220}>
-              <ul className="mt-8 flex flex-wrap gap-2">
-                {tags.map((t) => (
-                  <li
-                    key={t}
-                    className="rounded-full border border-border bg-card px-3.5 py-1.5 text-xs tracking-wide text-foreground/70"
-                  >
-                    {t}
-                  </li>
-                ))}
-              </ul>
+              <HeroSocialLinks />
             </Reveal>
 
             <Reveal delay={280}>
@@ -357,14 +354,15 @@ function Home() {
 
           <ul className="mt-12 space-y-1">
             {outside.map((o, i) => (
-              <Reveal key={o} delay={i * 50} as="li">
+              <Reveal key={o.title} delay={i * 50} as="li">
                 <div className="group flex items-baseline gap-5 border-b border-border/70 py-5">
                   <span className="font-mono text-xs text-muted-foreground">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <span className="text-lg text-foreground/80 transition-transform duration-300 group-hover:translate-x-1 md:text-xl">
-                    {o}
-                  </span>
+                  <div className="transition-transform duration-300 group-hover:translate-x-1">
+                    <h3 className="text-lg text-foreground/80 md:text-xl">{o.title}</h3>
+                    <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{o.text}</p>
+                  </div>
                 </div>
               </Reveal>
             ))}
