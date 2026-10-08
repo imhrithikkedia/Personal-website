@@ -45,18 +45,22 @@ export function HeroSocialLinks() {
   return (
     <nav aria-label="Social links" className="mt-8">
       <ul className="flex flex-wrap items-center gap-x-5 gap-y-2">
-        {socialLinks.map((social, index) => (
-          <li key={social.label} className="flex items-center gap-x-5">
-            {index > 0 && <span aria-hidden="true" className="text-border">·</span>}
-            <a
-              href={social.href}
-              {...(social.href.startsWith("http") ? { target: "_blank", rel: "noreferrer noopener" } : {})}
-              className="link-underline text-sm text-muted-foreground transition-colors hover:text-accent"
-            >
-              {social.label === "X (Twitter)" ? "X" : social.label}
-            </a>
-          </li>
-        ))}
+        {socialLinks.map((social, index) => {
+          const Icon = social.icon;
+          return (
+            <li key={social.label} className="flex items-center gap-x-5">
+              {index > 0 && <span aria-hidden="true" className="text-border">·</span>}
+              <a
+                href={social.href}
+                {...(social.href.startsWith("http") ? { target: "_blank", rel: "noreferrer noopener" } : {})}
+                className="link-underline inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-accent"
+              >
+                <Icon className="size-[18px] shrink-0" />
+                <span>{social.label === "X (Twitter)" ? "X" : social.label}</span>
+              </a>
+            </li>
+          );
+        })}
       </ul>
     </nav>
   );

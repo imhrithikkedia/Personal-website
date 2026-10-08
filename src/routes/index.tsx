@@ -177,17 +177,9 @@ function Home() {
             </Reveal>
 
             <Reveal delay={280}>
-              <div className="mt-10 flex flex-wrap items-center gap-5">
+              <div className="mt-10">
                 <a href="#journey" className="link-underline text-sm text-muted-foreground">
                   Explore my journey ↓
-                </a>
-                <a
-                  href="/cv.pdf"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="link-underline text-sm text-muted-foreground"
-                >
-                  View / Download CV ↗
                 </a>
               </div>
             </Reveal>
