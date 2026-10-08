@@ -42,14 +42,6 @@ export function Nav() {
               {l.label}
             </a>
           ))}
-          <a
-            href="/cv.pdf"
-            target="_blank"
-            rel="noreferrer noopener"
-            className="link-underline text-sm text-foreground/80 transition-colors hover:text-accent"
-          >
-            View / Download CV ↗
-          </a>
         </div>
 
         <button
@@ -75,15 +67,6 @@ export function Nav() {
               {l.label}
             </a>
           ))}
-          <a
-            href="/cv.pdf"
-            target="_blank"
-            rel="noreferrer noopener"
-            onClick={() => setOpen(false)}
-            className="block py-3 text-base text-accent"
-          >
-            View / Download CV ↗
-          </a>
         </div>
       )}
     </header>
