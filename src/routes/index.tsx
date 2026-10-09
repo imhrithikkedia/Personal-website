@@ -4,7 +4,7 @@ import { Reveal } from "@/components/site/Reveal";
 import { Journey } from "@/components/site/Journey";
 import { Foc } from "@/components/site/Foc";
 import { Ideas } from "@/components/site/Ideas";
-import { HeroSocialLinks, SocialLinks } from "@/components/site/SocialLinks";
+import { SocialLinks } from "@/components/site/SocialLinks";
 import texture from "@/assets/texture.jpg";
 import portrait from "@/assets/hrithik-portrait.jpg";
 
@@ -173,7 +173,7 @@ function Home() {
             </Reveal>
 
             <Reveal delay={220}>
-              <HeroSocialLinks />
+              <SocialLinks className="mt-8" />
             </Reveal>
 
             <Reveal delay={280}>
