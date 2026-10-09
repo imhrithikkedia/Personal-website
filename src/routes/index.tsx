@@ -173,7 +173,7 @@ function Home() {
             </Reveal>
 
             <Reveal delay={220}>
-              <SocialLinks className="mt-8" />
+              <SocialLinks className="mt-8" label="Find me on" />
             </Reveal>
 
             <Reveal delay={280}>
