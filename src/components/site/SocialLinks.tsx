@@ -1,5 +1,3 @@
-import { cn } from "@/lib/utils";
-
 type SocialLink = {
   label: string;
   href: string;
@@ -66,25 +64,30 @@ export function HeroSocialLinks() {
   );
 }
 
-export function SocialLinks({ className }: { className?: string }) {
+export function SocialLinks({ className, label }: { className?: string; label?: string }) {
   return (
-    <div className={cn("flex flex-wrap items-center gap-3", className)}>
-      {socialLinks.map((s) => {
-        const Icon = s.icon;
-        const external = s.href.startsWith("http");
-        return (
-          <a
-            key={s.label}
-            href={s.href}
-            aria-label={s.label}
-            title={s.label}
-            {...(external ? { target: "_blank", rel: "noreferrer noopener" } : {})}
-            className="flex size-11 items-center justify-center rounded-full border border-border text-foreground/70 transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:text-accent"
-          >
-            <Icon className="size-[18px]" />
-          </a>
-        );
-      })}
+    <div className={className}>
+      {label && (
+        <p className="eyebrow mb-5 text-muted-foreground">{label}</p>
+      )}
+      <div className="flex flex-wrap items-center gap-3">
+        {socialLinks.map((s) => {
+          const Icon = s.icon;
+          const external = s.href.startsWith("http");
+          return (
+            <a
+              key={s.label}
+              href={s.href}
+              aria-label={s.label}
+              title={s.label}
+              {...(external ? { target: "_blank", rel: "noreferrer noopener" } : {})}
+              className="flex size-11 items-center justify-center rounded-full border border-border text-foreground/70 transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:text-accent"
+            >
+              <Icon className="size-[18px]" />
+            </a>
+          );
+        })}
+      </div>
     </div>
   );
 }
