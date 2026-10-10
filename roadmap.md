@@ -1,0 +1,5 @@
+- [ ] Tighten shared section spacing, mobile hero and journey transitions.
+- [ ] Balance the conversation section and add an email alternative.
+- [ ] Refine personal-interest copy, standardise spelling and clarify jargon.
+- [ ] Update the page title and social metadata.
+- [ ] Verify the page on mobile and desktop and confirm all tasks are complete.

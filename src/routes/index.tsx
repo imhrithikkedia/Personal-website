@@ -11,18 +11,20 @@ import portrait from "@/assets/hrithik-portrait.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Hrithik Kedia — Generalist Operator & Community Builder" },
+      { title: "Hrithik Kedia — Operator, Builder & Founder's Office" },
       {
         name: "description",
         content:
-          "I build where the problems are messy and the playbook doesn't exist yet. Generalist operator across strategy, business, P&L and growth — and co-builder of Founder's Office Club.",
+          "I build where the problems are messy and the playbook doesn't exist yet. Generalist operator across strategy, business, profit and loss, and growth — and co-builder of Founder's Office Club.",
       },
-      { property: "og:title", content: "Hrithik Kedia — Generalist Operator" },
+      { property: "og:title", content: "Hrithik Kedia — Operator, Builder & Founder's Office" },
       {
         property: "og:description",
         content:
-          "A personal operating story: Founder's Office, business building, P&L ownership and community.",
+          "A personal operating story: Founder's Office, business building, profit and loss ownership, and community.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Home,
@@ -33,8 +35,8 @@ const TOPMATE = "https://topmate.io/imhrithikkedia";
 const owned = [
   {
     icon: "📈",
-    title: "Businesses & P&Ls",
-    body: "From evaluating new markets to owning categories and thinking about unit economics, I enjoy understanding what makes a business work.",
+    title: "Businesses & profit and loss",
+    body: "From evaluating new markets to owning categories and understanding what makes a product or service profitable, I enjoy learning what makes a business work.",
   },
   {
     icon: "🚀",
@@ -44,7 +46,7 @@ const owned = [
   {
     icon: "🎯",
     title: "Growth & GTM",
-    body: "Community, events, partnerships, marketing and new initiatives — always with an eye on the business outcome.",
+    body: "Go-to-market work, community, events, partnerships, marketing and new initiatives — always with an eye on the business outcome.",
   },
   {
     icon: "🤝",
@@ -87,20 +89,20 @@ const principles = [
 ];
 
 const outside = [
-  { title: "Exploring new places for food", text: "I like exploring new places for food." },
-  { title: "Playing badminton", text: "I like playing badminton." },
-  { title: "Going for a swim", text: "I like going for swimming some days." },
-  { title: "Playing Counter-Strike", text: "I like playing Counter-Strike." },
-  { title: "Playing 8-Ball Pool", text: "I like playing 8-Ball Pool." },
+  { title: "Exploring new places for food", text: "Trying a new spot is one of my favourite ways to get to know a place." },
+  { title: "Playing badminton", text: "A little friendly competition is a welcome change of pace." },
+  { title: "Going for a swim", text: "Some days, a swim is the simplest way to reset." },
+  { title: "Playing Counter-Strike", text: "I still enjoy a few rounds of Counter-Strike when there's time." },
+  { title: "Playing 8-Ball Pool", text: "8-ball rewards patience — and occasionally a lucky shot." },
   {
     title: "Being a bathroom singer",
     text: "Some days I’m a bathroom singer. Very occasionally, I actually record it.",
   },
   {
-    title: "Stand-up, movies & interesting things",
-    text: "I like going for stand-up comedy, watching movies, or showing up if there’s something interesting happening.",
+    title: "Stand-up, films & interesting things",
+    text: "I'm always up for a good comedy set, a film, or a plan that sounds interesting.",
   },
-  { title: "Travelling & collecting experiences", text: "I like travelling and collecting experiences." },
+  { title: "Travelling & collecting experiences", text: "New places tend to leave me with the best stories — and a list of places to eat next time." },
 ];
 
 const conversations = [
@@ -137,7 +139,7 @@ function Home() {
       <Nav />
 
       {/* HERO */}
-      <section className="px-6 pb-20 pt-32 md:px-10 md:pb-28 md:pt-40">
+      <section className="px-6 pb-12 pt-24 md:px-10 md:pb-28 md:pt-40">
         <div className="mx-auto grid max-w-6xl items-end gap-14 md:grid-cols-[1.4fr_1fr] md:gap-16">
           <div>
             <Reveal>
@@ -150,7 +152,7 @@ function Home() {
             </Reveal>
 
             <Reveal delay={80}>
-              <p className="eyebrow mt-10">Hi, I'm Hrithik Kedia 👋</p>
+              <p className="eyebrow mt-6 md:mt-10">Hi, I'm Hrithik Kedia 👋</p>
               <h1 className="display mt-5 text-[2.7rem] leading-[1.03] sm:text-6xl lg:text-7xl">
                 I like building things when there isn't a{" "}
                 <span className="italic text-accent">clear manual.</span>
@@ -162,7 +164,7 @@ function Home() {
                 <p>
                   I'm a generalist operator working at the intersection of strategy and execution.
                   Over the last few years, I've worked across startups and businesses, taking on
-                  everything from GTM and growth to business development, P&amp;Ls, partnerships,
+                  everything from go-to-market work and growth to business development, profit and loss, partnerships,
                   and special projects.
                 </p>
                 <p>
@@ -173,11 +175,11 @@ function Home() {
             </Reveal>
 
             <Reveal delay={220}>
-              <SocialLinks className="mt-8" label="Find me on" />
+              <SocialLinks className="mt-4 md:mt-8" label="Find me on" />
             </Reveal>
 
             <Reveal delay={280}>
-              <div className="mt-10">
+              <div className="mt-4 md:mt-10">
                 <a href="#journey" className="link-underline text-sm text-muted-foreground">
                   Explore my journey ↓
                 </a>
@@ -225,7 +227,7 @@ function Home() {
       </section>
 
       {/* ABOUT */}
-      <section id="about" className="py-16 md:py-24">
+      <section id="about" className="py-12 md:py-16">
         <div className="mx-auto max-w-5xl px-6 md:px-10">
           <Reveal>
             <p className="eyebrow">01 — The generalist advantage</p>
@@ -247,7 +249,7 @@ function Home() {
               <div className="space-y-5 text-[1.02rem] leading-relaxed text-foreground/75">
                 <p>
                   I've worked in Founder's Office and Business Operations roles where one quarter
-                  could mean building GTM strategies and the next could mean evaluating a new
+                  could mean building go-to-market strategies and the next could mean evaluating a new
                   market, running a P&amp;L, fixing an internal process, launching a campaign, or
                   working on a partnership.
                 </p>
@@ -274,7 +276,7 @@ function Home() {
       <Journey />
 
       {/* BUILT & OWNED */}
-      <section id="owned" className="py-16 md:py-24">
+      <section id="owned" className="py-12 md:py-16">
         <div className="mx-auto max-w-6xl px-6 md:px-10">
           <Reveal>
             <p className="eyebrow">03 — Things I've built &amp; owned</p>
@@ -311,7 +313,7 @@ function Home() {
 
 
       {/* PHILOSOPHY */}
-      <section className="py-16 md:py-24">
+      <section className="py-12 md:py-16">
         <div className="mx-auto max-w-6xl px-6 md:px-10">
           <Reveal>
             <p className="eyebrow">06 — My operating philosophy</p>
@@ -335,7 +337,7 @@ function Home() {
       </section>
 
       {/* OUTSIDE THE SPREADSHEET */}
-      <section className="border-t border-border bg-secondary/40 py-16 md:py-24">
+      <section className="border-t border-border bg-secondary/40 py-12 md:py-16">
         <div className="mx-auto max-w-5xl px-6 md:px-10">
           <Reveal>
             <p className="eyebrow">07 — Outside the spreadsheet</p>
@@ -363,7 +365,7 @@ function Home() {
       </section>
 
       {/* VALUE + SOCIAL PROOF */}
-      <section id="contact" className="border-t border-border py-16 md:py-28">
+      <section id="contact" className="border-t border-border py-12 md:py-16">
         <div className="mx-auto max-w-5xl px-6 md:px-10">
           <Reveal>
             <p className="eyebrow">08 — Worth a conversation?</p>
@@ -373,12 +375,12 @@ function Home() {
             </h2>
           </Reveal>
 
-          <div className="mt-12 grid gap-12 md:grid-cols-[1.1fr_1fr]">
-            <Reveal delay={80}>
+          <div className="mt-8 grid gap-8 md:grid-cols-[1.1fr_1fr] md:grid-rows-[auto_auto] md:gap-x-12 md:gap-y-6">
+            <Reveal delay={80} className="md:col-start-1 md:row-start-1">
               <div className="space-y-4 text-[1.02rem] leading-relaxed text-foreground/75">
                 <p>
                   I've spent the last few years navigating Founder's Office, Business Operations,
-                  GTM, growth, P&amp;Ls, partnerships and the wonderfully messy space in between.
+                  go-to-market work, growth, profit and loss, partnerships and the wonderfully messy space in between.
                 </p>
                 <p>
                   I've also spent a lot of time helping people think through careers in the
@@ -402,7 +404,7 @@ function Home() {
               </ul>
             </Reveal>
 
-            <Reveal delay={140}>
+            <Reveal delay={140} className="md:col-start-2 md:row-span-2 md:row-start-1">
               <div className="rounded-sm border border-border bg-secondary/40 p-6 md:p-8">
                 <p className="eyebrow text-accent">On Topmate</p>
                 <p className="display mt-3 text-3xl md:text-4xl">4.9 / 5</p>
@@ -426,10 +428,10 @@ function Home() {
                 </p>
               </div>
             </Reveal>
-          </div>
-
-          <Reveal delay={200}>
-            <div className="mt-14 flex flex-wrap items-center gap-5">
+            <Reveal delay={200} className="flex flex-col items-start justify-end gap-3 md:col-start-1 md:row-start-2">
+              <p className="text-sm text-muted-foreground">
+                Or just <a href="mailto:imhrithikkedia@gmail.com" className="link-underline text-foreground/80 transition-colors hover:text-accent">email me</a>.
+              </p>
               <a
                 href={TOPMATE}
                 target="_blank"
@@ -442,6 +444,7 @@ function Home() {
               </a>
             </div>
           </Reveal>
+          </div>
         </div>
 
       </section>

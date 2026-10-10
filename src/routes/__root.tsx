@@ -78,14 +78,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Hrithik Kedia — Generalist Operator" },
+      { title: "Hrithik Kedia — Operator, Builder & Founder's Office" },
       {
         name: "description",
         content:
-          "Generalist operator working across strategy, business and execution. Founder's Office, P&L ownership, and co-building Founder's Office Club.",
+          "Generalist operator working across strategy, business and execution. Founder's Office, profit and loss ownership, and co-building Founder's Office Club.",
       },
       { name: "author", content: "Hrithik Kedia" },
-      { property: "og:title", content: "Hrithik Kedia — Generalist Operator" },
+      { property: "og:title", content: "Hrithik Kedia — Operator, Builder & Founder's Office" },
       {
         property: "og:description",
         content: "I build where the problems are messy and the playbook doesn't exist yet.",
