@@ -35,7 +35,7 @@ const TOPMATE = "https://topmate.io/imhrithikkedia";
 const owned = [
   {
     icon: "📈",
-    title: "Businesses & P&Ls",
+    title: "Businesses & profit and loss",
     body: "From evaluating new markets to owning categories and understanding what makes a product or service profitable, I enjoy learning what makes a business work.",
   },
   {
@@ -46,7 +46,7 @@ const owned = [
   {
     icon: "🎯",
     title: "Growth & GTM",
-    body: "Community, events, partnerships, marketing and new initiatives — always with an eye on the business outcome.",
+    body: "Go-to-market work, community, events, partnerships, marketing and new initiatives — always with an eye on the business outcome.",
   },
   {
     icon: "🤝",
@@ -164,7 +164,7 @@ function Home() {
                 <p>
                   I'm a generalist operator working at the intersection of strategy and execution.
                   Over the last few years, I've worked across startups and businesses, taking on
-                  everything from GTM and growth to business development, P&amp;Ls, partnerships,
+                  everything from go-to-market work and growth to business development, profit and loss, partnerships,
                   and special projects.
                 </p>
                 <p>
@@ -249,7 +249,7 @@ function Home() {
               <div className="space-y-5 text-[1.02rem] leading-relaxed text-foreground/75">
                 <p>
                   I've worked in Founder's Office and Business Operations roles where one quarter
-                  could mean building GTM strategies and the next could mean evaluating a new
+                  could mean building go-to-market strategies and the next could mean evaluating a new
                   market, running a P&amp;L, fixing an internal process, launching a campaign, or
                   working on a partnership.
                 </p>
@@ -380,7 +380,7 @@ function Home() {
               <div className="space-y-4 text-[1.02rem] leading-relaxed text-foreground/75">
                 <p>
                   I've spent the last few years navigating Founder's Office, Business Operations,
-                  GTM, growth, P&amp;Ls, partnerships and the wonderfully messy space in between.
+                  go-to-market work, growth, profit and loss, partnerships and the wonderfully messy space in between.
                 </p>
                 <p>
                   I've also spent a lot of time helping people think through careers in the
