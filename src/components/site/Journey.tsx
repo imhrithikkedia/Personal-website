@@ -25,7 +25,7 @@ const chapters: Chapter[] = [
     id: "primus",
     org: "Primus Senior Living",
     logo: primusLogo,
-    role: "Founder's Office → Business Builder → P&L & City Leadership",
+    role: "Founder's Office → Business Builder → Profit & Loss and City Leadership",
     period: "Now",
     current: true,
     theme: "Every few months, a different problem. The mission stayed the same: move the business forward.",
@@ -34,15 +34,15 @@ const chapters: Chapter[] = [
     stages: [
       {
         label: "Learn",
-        text: "Real estate fundamentals, FSI/FAR, land economics, JD/JV/DM structures, DCF, IRR and cash flows.",
+        text: "Development potential and floor-space limits, land economics, joint development, joint ventures, development management, project cash flows, financial modelling and returns.",
       },
       {
         label: "Build",
-        text: "Evaluating expansion opportunities across cities, working on travel/category P&L, marketing/referral channels, partnerships and special projects.",
+        text: "Evaluating expansion opportunities across cities; working on travel and category profit and loss, marketing and referral channels, partnerships and special projects.",
       },
       {
         label: "Own",
-        text: "Taking ownership of city-level P&L and Founder's Office responsibilities.",
+        text: "Taking ownership of city-level profit and loss and Founder's Office responsibilities.",
       },
     ],
     points: [
@@ -100,7 +100,7 @@ const chapters: Chapter[] = [
 const proof = [
   "10+ deals evaluated in my first quarter at Primus",
   "Expansion opportunities across 7+ cities",
-  "~20% CM1 achieved across 6 domestic trips in the travel category",
+  "~20% contribution margin (CM1) achieved across 6 domestic trips in the travel category",
   "1.2k+ Topmate bookings",
   "40 testimonials on Topmate",
 ];
@@ -110,7 +110,7 @@ export function Journey() {
   const [openId, setOpenId] = useState<string>("primus");
 
   return (
-    <section id="journey" className="border-t border-border bg-secondary/40 py-16 md:py-24">
+    <section id="journey" className="border-t border-border bg-secondary/40 py-12 md:py-16">
       <div className="mx-auto max-w-5xl px-6 md:px-10">
         <Reveal>
           <p className="eyebrow">02 — The journey</p>
@@ -119,7 +119,7 @@ export function Journey() {
           </h2>
         </Reveal>
 
-        <div className="mt-12 md:mt-16">
+        <div className="mt-8 md:mt-16">
           {chapters.map((c, i) => {
             const isOpen = openId === c.id;
             return (
@@ -142,7 +142,7 @@ export function Journey() {
                     )}
                   </div>
 
-                  <div className="pb-8 md:pb-10">
+                  <div className="pb-4 md:pb-10">
                     <button
                       type="button"
                       onClick={() => setOpenId(isOpen ? "" : c.id)}
@@ -185,11 +185,11 @@ export function Journey() {
                           </p>
                         )}
                         {c.stages && (
-                          <ol className="mt-8 grid gap-6 md:grid-cols-3">
+                          <ol className="mt-4 grid gap-3 md:mt-8 md:grid-cols-3 md:gap-6">
                             {c.stages.map((s) => (
-                              <li key={s.label} className="border-t border-border pt-4">
-                                <p className="eyebrow text-accent">{s.label}</p>
-                                <p className="mt-3 text-[0.94rem] leading-relaxed text-foreground/75">
+                              <li key={s.label} className="grid grid-cols-[3.5rem_1fr] gap-3 border-t border-border pt-3 md:block md:pt-4">
+                                <p className="eyebrow pt-0.5 text-accent">{s.label}</p>
+                                <p className="text-sm leading-relaxed text-foreground/75 md:mt-3 md:text-[0.94rem]">
                                   {s.text}
                                 </p>
                               </li>
@@ -198,7 +198,7 @@ export function Journey() {
                         )}
 
                         {c.points.length > 0 && (
-                          <ul className="mt-6 max-w-2xl space-y-3">
+                          <ul className="mt-4 max-w-2xl space-y-2 md:mt-6 md:space-y-3">
                             {c.points.map((p) => (
                               <li key={p} className="flex gap-3 text-[0.95rem] leading-relaxed text-foreground/75">
                                 <span className="mt-2 size-1 shrink-0 rounded-full bg-accent" />
@@ -207,7 +207,7 @@ export function Journey() {
                             ))}
                           </ul>
                         )}
-                        <p className="display mt-8 max-w-xl border-l-2 border-accent pl-5 text-xl italic md:text-2xl">
+                        <p className="display mt-4 max-w-xl border-l-2 border-accent pl-5 text-xl italic md:mt-8 md:text-2xl">
                           {c.theme}
                         </p>
                       </div>

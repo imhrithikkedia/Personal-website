@@ -149,7 +149,7 @@ export function Foc() {
   return (
     <section
       id="foc"
-      className="border-y border-border bg-primary py-24 text-primary-foreground md:py-32"
+      className="border-y border-border bg-primary py-12 text-primary-foreground md:py-16"
     >
       <div className="mx-auto max-w-6xl px-6 md:px-10">
         {/* 1 — THE STORY */}

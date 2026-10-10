@@ -145,7 +145,7 @@ const ideas: Idea[] = [
         text: "Startup decisions about tools and agencies often happen through scattered recommendations across WhatsApp groups, Slack channels, and communities.",
       },
       {
-        text: "TODIRE organizes these recommendations into a structured, searchable repository to help teams discover trusted solutions faster.",
+        text: "TODIRE organises these recommendations into a structured, searchable repository to help teams discover trusted solutions faster.",
       },
     ],
   },
@@ -374,7 +374,7 @@ function IdeaCard({ idea, delay }: { idea: Idea; delay: number }) {
 
 export function Ideas() {
   return (
-    <section id="ideas" className="border-t border-border py-16 md:py-24">
+    <section id="ideas" className="border-t border-border py-12 md:py-16">
       <div className="mx-auto max-w-6xl px-6 md:px-10">
         <Reveal>
           <p className="eyebrow">05 — Things I might build</p>
