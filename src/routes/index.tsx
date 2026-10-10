@@ -442,7 +442,6 @@ function Home() {
                 <span aria-hidden="true">→</span>
                 <span className="display text-base italic">Book a 1:1</span>
               </a>
-            </div>
           </Reveal>
           </div>
         </div>
